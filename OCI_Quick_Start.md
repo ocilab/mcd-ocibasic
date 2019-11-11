@@ -4,7 +4,7 @@
 
 [개요](#개요)
 
-[사전 준비 사항](#사전-준비-사항)
+[미리 알아두면 좋은 것 들](#미리-알아두면-좋은-것-들)
 
 [OCI 콘솔에 로그인하여 VCN 생성](#OCI-콘솔에-로그인하여-VCN-생성)
 
@@ -50,19 +50,19 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## 사전 준비 사항
+## 미리 알아두면 좋은 것 들
 
-1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
+1. OCI의 계정 정보 (User, Password, Tenant, and Compartment)  
 
 2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
-3. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
+3. OCI 콘솔에 대한 사전 경험: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
 
-4. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
+4. 네트워킹 정보: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
 
-5. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+5. Compartment에 대한 이해: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
-6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+6. Compute 인스턴스에 접속: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 
 ## OCI 콘솔에 로그인하여 VCN 생성
@@ -82,7 +82,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
-**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+**NOTE:* Ensure the correct Compartment is selected under COMPARTMENT list
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
