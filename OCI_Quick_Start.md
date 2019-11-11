@@ -74,49 +74,50 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 * **Compartment:**{{Compartment}}
 
 
-1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
+1. 테넌트 이름과 오른쪽 하단의 **Oracle Cloud Infrastructure** 아래에 사용자 이름 그리고 패스워드를 이용하여 로그인 하십시오.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
+2. OCI 서비스 메뉴에서 Networking 아래의  **Virtual Cloud Network** 을 클릭하고  **Create Virtual Cloud Network** 버튼을 클릭하십시오.
 
-3. Select the compartment assigned to you from drop down menu on left part of the screen
+3. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
 
-**NOTE:* Ensure the correct Compartment is selected under COMPARTMENT list
+**참고:* COMPARTMENT 목록에서 올바른 Compartment가 선택되었는지 확인 하십시오.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
-4. Fill out the dialog box:
+4. 대화 상자를 채우세요:
 
 
 
 - **Create in Compartment:** Has the correct compartment
-- **Name:** Enter easy to remember name
-- **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-- Click **Create Virtual Cloud Network**
-- Click **Close**
+- **Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
+- **Create Virtual Cloud Network Plus Related Resources:** 이 옵션을 선택 합니다.
+- **Create Virtual Cloud Network** 을 클릭하여 리소스를 생성합니다. 
+- **Close** 버튼을 누르고 종료 합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
               
-5. We will open port 80 on this VCN to provide http access to app on the compute instance(to be installed later on. Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
+
+5. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text">
 
-6. Click **Add Ingress Rule** under **Ingress Rules** and add below rule:
+6. **Ingress Rules**아래에 **Add Ingress Rule**을 클릭하고 아래의 규칙을 추가합니다.:
 
 
-- **Make sure STATELESS Flag in un-checked**
+- **STATELESS** 체크박스는 사용하지 않음으로 기본을 유지
 - **SOURCE TYPE:** CIDR
 - **SOURCE CIDR:** 0.0.0.0/0
 - **IP PROTOCOL:** TCP
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** 80
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_002.PNG" alt="image-alt-text">
+<img src="img/Customer_Lab_002-1.PNG" alt="image-alt-text">
 
 7. Click **Add Ingress Rule** at the bottom
               
