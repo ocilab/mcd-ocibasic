@@ -6,7 +6,7 @@
 
 [사전 준비 사항](#사전-준비-사항)
 
-[OCI 콘솔에 로그인하여 VCN 생성](#OCI-콘솔에-로그인하여-VCN 생성)
+[OCI 콘솔에 로그인하여 VCN 생성](#OCI-콘솔에-로그인하여-VCN-생성)
 
 [Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#create-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
 
