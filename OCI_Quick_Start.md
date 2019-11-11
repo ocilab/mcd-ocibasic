@@ -6,7 +6,7 @@
 
 [사전 준비 사항](#사전-준비-사항)
 
-[OCI 콘솔에 로그인하여 VCN 생성](# OCI 콘솔에 로그인하여 VCN 생성)
+[OCI 콘솔에 로그인하여 VCN 생성](#OCI-콘솔에-로그인하여-VCN 생성)
 
 [Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#create-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
 
@@ -65,7 +65,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 
-## Sign in to OCI Console and create VCN
+## OCI 콘솔에 로그인하여 VCN 생성
 
 
 * **Tenant Name:** {{Cloud Tenant}}
