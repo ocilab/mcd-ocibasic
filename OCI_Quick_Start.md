@@ -50,7 +50,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## Pre-Requisites
+## 사전 준비 사항
 
 1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
