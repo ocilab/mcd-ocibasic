@@ -433,10 +433,10 @@ sudo mount /dev/sdb /mnt/www/html
 sudo systemctl restart httpd
 ```
 
-12. Launch a web browser and Enter compute Instance's public IP,
+12. 웹 브라우저에서 두번째 인스턴스의 갱신 된 Public IP 주소로 접속을 하십시오,
 **http://<COMPUTE_INSTANCE_PUBLIC_IP>**
 
-13. Screen like below should appear, Enter the required information
+13. 아래의 그림과 같이 웹 화면이 브라우징 되면 성공적으로 실습이 완료 된 것입니다. (입력창에 별도의 입력은 필요하지 않습니다)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_015.PNG" alt="image-alt-text">
 
