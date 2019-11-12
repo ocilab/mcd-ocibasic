@@ -119,259 +119,239 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 <img src="img/Customer_Lab_002-1.PNG" alt="image-alt-text">
 
-7. Click **Add Ingress Rule** at the bottom
+
+7. 하단의 **Add Ingress Rule** 버튼을 누릅니다.
               
 ## Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
-1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
+**For Mac OS**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
+1. Terminal Window 
+2. 프롬프트에서 ``ssh-keygen`` 을 입력
+3. 기본 값으로 *enter*를 입력
+4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오. 
+5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
 
-2. Enter command 
-```
-ssh-keygen
-```
-**HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
+**For Windows: GitBash 또는 Windows Subsystem for Linux (WSL)**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
+1. 선호하는 Terminal 도구를 사용하며 이하 과정은 Mac OS & Linux 환경에서와 동일 합니다.
 
-3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
+2. 프롬프트에서 ``ssh-keygen`` 을 입력
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
+3. 기본 값으로 *enter*를 입력
 
-4. You should now have the Public and Private keys:
+4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오.
 
-/C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
+5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
 
-/C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
+   <img src="C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
-**NOTE:** id_rsa.pub will be used to create 
-Compute instance and id_rsa to connect via SSH into compute instance.
+   
 
-**HINT:** Enter command 
-```
-cd /C/Users/PhotonUser/.ssh (No Spaces) 
-```
-and then 
-```
-ls 
-```
-to verify the two files exist. 
+**For Windows: PuttyGen 사용하기**
 
-5. In git-bash Enter command  
-```
-cat /C/Users/PhotonUser/.ssh/id_rsa.pub
-```
- , highlight the key and copy 
+1. PuttyGen 열기
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
+2. [Generate] 버튼 클릭
 
-6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
+3. 진행률 표시 줄이 100 %에 도달 할 때까지 마우스를 화면에서 임의로 움직입니다. 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
+   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/puttygen-generate.jpg)
 
-7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
+4. [Save private key] 버튼을 누릅니다. 이 파일은 확장자가 주어져 있지 않습니다.
 
-8. Click **Create Instance**. Fill out the dialog box:
+   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/puttygen-saveprivatekey.jpg)
 
-- **Name your instance**: Enter a name 
-- **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
-- **Availability Domain**: Select availability domain
-- **Instance Type**: Select Virtual Machine 
-- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 
-**Under Configure Networking**
-- **Virtual cloud network compartment**: Select your compartment
-- **Virtual cloud network**: Choose the VCN 
-- **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the first Subnet
-- **Use network security groups to control traffic** : Leave un-checked
-- **Assign a public IP address**: Check this option
-- **Boot Volume:** Leave the default
-- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+5. 텍스트 필드에 표시된 Public key를 복사하고 수동으로 새 텍스트 파일에 저장하고 파일 이름을 id_rsa.pub로 지정하십시오.
 
-9. Click **Create**
+6. 백업을 위해서 노트패드와 같은 텍스트 에디터로 붙여 넣고 별도로 보관합니다.
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 OR choose a different AD
+7. OCI 콘솔로 전환하십시오. OCI 서비스 메뉴에서, **Compute** 아래에 **Instances** 를 클릭합니다.
+
+8. **Create Instance**버튼을 누르고. 아래와 같이 대화상자의 내용을 채웁니다:
+
+- **Name your instance**: <인스턴스 이름을 입력> 
+- **Choose an operating system or image source**: OS 이미지 목록에서 선호하는 이미지를 선택하십시오.(실습을 위해서 Oracle Linux최신 버전을 권장합니다)
+- **Availability Domain**: 가용성 도메인을 선택합니다.
+- **Instance Type**: Virtual Machine을 선택합니다. 
+- **Instance Shape**: VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 중에 선택가능한 Shape을 지정합니다.
+
+**Configure Networking**
+
+- **Virtual cloud network compartment**: VCN Compartment를 선택 하십시오.
+- **Virtual cloud network**: 앞에서 생성한 VCN을 선택하십시오.
+- **Subnet Compartment:** Subnet Compartment를 선택하십시오.
+- **Subnet:** VCN생성시 함께 생성된 기본 Subnet을 선택하십시오 
+- **Use network security groups to control traffic** : 기본옵션(Un-checked)을 그대로 두십시오 
+- **Assign a public IP address**: 이 옵션을 선택합니다.
+- **Boot Volume:** 기본 옵션을 유지
+- **Add SSH Keys:** 위에서 생성한 Public key를 선택하거나 혹은 직접 붙여넣기를 합니다.
+
+9. **Create**버튼을 눌러서 인스턴스를 생성합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
-10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
+10. 터미널에서 Private key가 위치한 곳에서 대기하고 인스턴스가  **Running** 상태가 될 때까지 기다립니다. 
 ```
  cd /C/Users/PhotonUser/.ssh
 ```
-11. Enter **ls** and verify id_rsa file exists
+11. **ls** 명령으로 id_rsa 파일이 존재하는지 확인 하고,
 
-12. Enter command 
+12. 인스턴스의 Public IP를 대상으로 아래와 같이 ssh 접속을 합니다. (Oracle Linux의 기본  user명은 opc 입니다)
 ```
 ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
 
-13. Enter 'Yes' when prompted for security message
+13. 보안 메시지가 표시되면 'yes'를 입력 하십시오.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
 
-14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
+14. 정상 접속이 되고 프롬프트에 opc@<인스턴스-이름> 이 표기되는지 확인 합니다.
 
-15. From OCI services menu Click **Block Volumes** under Block Storage, then Click **Create Block Volume**.
+15. OCI 서비스 메뉴에서 블록 스토리지 아래의 **Block Volumes**을 클릭 한 다음 **Create Block Volume**을 클릭하십시오.
 
-16. Fill out the dialog box: 
+16. 나타나는 대화상자를 아래와 같이 채웁니다.: 
 
 
-- **Create in Compartment:** Has the correct compartment selected.
-- **Name:** Enter a name for the block volume (e.g. "block_vm).
-- **Availability Domain:** Select the first available domain (must be same as 
-Compute).
-- **SIZE:** Set to 50
-- **BACKUP POLICY:** Set to None (If this field shows ‘Error Retrieving Value’ then leave it as is)
+- **Create in Compartment:** 올바른 Compartment가 선택되어 있는지 확인 합니다.
+- **Name:** 생성 할 블록볼륨의 이름을 지정하십시오(예 "block_vm)
+- **Availability Domain:** 사용가능한 첫번째 도메인을 선택하십시오 (멀티 AD의 경우에는 연결 할 Compute인스턴스와 동일한 AD에 속하도록 합니다).
+- **SIZE:** 50 (GB 단위의 입력값이며 이 경우 50GB가 설정 됩니다)
+- **BACKUP POLICY:** 별도로 지정하지 않습니다 (만약 이 필드에서 ‘Error Retrieving Value’ 표기되면 그대로 두고 진행합니다)
 
-17. Click **Create Block Volume**. Wait for volume to become available. Wait for Block Volume state to change from 'Provisioning' to 'Available'
+17. **Create Block Volume**을 클릭하고 볼륨상태가 Provisioning에서 available이 될 때까지 기다립니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text">
 
-18. Attach Block volume to your compute instance. From OCI services menu Click **Instance** under Compute 
+18.  블록 볼륨을 Compute 인스턴스에 연결하십시오. OCI 서비스 메뉴의 Compute에서 Instance를 클릭하십시오. 
 
-19. For the compute instance created earlier, Click Action item. Click **Attach Block Volume**.
+19. 위에서 생성한 compute 인스턴스의 오른쪽 메뉴에서  **Attach Block Volume**을 클릭합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text">
 
-20. Fill out the dialog box:
+20. 대화상자를 채우십시오:
 
-- Choose how you want to attach your block volume: Paravirtualized
+- 블록 볼륨을 연결할 방법을 선택: Paravirtualized
 
-**NOTE:** We can also use ISCSI mode. For more information please refer to ;
+**NOTE:**  ISCSI 모드를 사용할 수도 있습니다. 자세한 내용은 다음을 참조하십시오;  ;
 
 **https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm#attachtype** OR refer Appendix section at the end of the lab.
 
 
-- BLOCK VOLUME COMPARTMENT: Ensure correct compartment is selected
-- Block Volume: Choose the volume created earlier
-- Device Path: Choose a device path. **Note down this device path as it will be used later on**
+- BLOCK VOLUME COMPARTMENT: 적절한 Compartment가 미리 설정되어 있습니다.
+- Block Volume: 위에서 생성한 블록 볼륨을 선택합니다.
+- Device Path: Choose a device path. **만약 Multi device의 경우 경로가 혼동될 수 있으니 경로를 기록 해 두십시오**
 - Access: Choose READ/WRITE
 
-21. Click **Attach**.
+21. **Attach**버튼을 클릭하십시오.
 
-22. Click **Close**.
+22. **Close**버튼을 클릭하십시오.
 
-**We now have a block volume created and attached to the Compute instance.**
+**이제 블록 볼륨이 생성되어 Compute 인스턴스에 연결 되었습니다.**
 
-23. Verify the Block Volume is attached by Clicking the Compute Instance name.
+23. Compute 인스턴스의 리소스중 **Attached Block Volumes**에 블록 볼륨이 연결되어 있는지 확인 하십시오.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_005.PNG" alt="image-alt-text">
 
 ## Install httpd on compute instance and install an app on Block Volume
 
-1. Switch to ssh session to compute install. Install httpd server, Enter Command:
+1. 인스턴스에 httpd 서버를 설치하기 위해 ssh 세션으로 이동하여 아래와 같이 명령을 수행합니다:
 ```
 sudo yum -y install httpd 
 ```
-2. Configure Compute instance firewall, Enter commands:
+2. http 트래픽을 허용하기 위해서 방화벽 설정에서 80번 포트 오픈 설정을 하십시오.:
 ```
 sudo firewall-cmd --permanent --add-port=80/tcp 
 ```
-(Open port 80 on the firewall to allow http and https traffic).
+​      (방화벽을 다시로드하여 규칙을 활성화하십시오.) 
 
-**NOTE:** Despite the line wrapping, the --add-port flag has no spaces.
 ```
 sudo firewall-cmd --reload 
 ```
-(Reload the firewall to activate the rules).
 
-3. Start httpd, Enter command:
+
+3. httpd 서비스를 시작 하십시오:
 ```
 sudo systemctl start httpd 
 ```
 
-4. Enter commad lsblk to verify the Block volume storage is initialized. This could be sda, sdb or somethig else strting with 'sd'. In below example this volume is called sdb. Below screen shot shows a 1 TB volume though in this lab we have created a 50GB volume thus the size in your compute instance will be 50GB.
+4. lsblk 명령을 입력하여 블록 볼륨 스토리지가 초기화 되었는지 확인하십시오. 첫번째로 Attach된 스토리지는 sdb로 표기됩니다. 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/OCI_Quick_Start001.PNG" alt="image-alt-text">
+<img src="img/OCI_Quick_Start001-1.PNG" alt="image-alt-text">
 
-**HINT:** The Name sdb is the block volume storage. This name could change for your specific attachment (i.e sdc)
 
-5. To format the block volume, Enter Command: 
+
+5. 블록 볼륨을 포멧하기 위해서 아래 명령을 실행하십시오
 ```            
-sudo fdisk <DEVICE_PATH> -l 
+sudo fdisk /dev/sdb -l 
 ```
-**For example sudo fdisk /dev/sdb -l**   
-Wait for formatting to complete
-
-6. Create a file system on the block volume, Enter Command: 
+6. 블록 볼륨에 파일시스템을 생성 하도록 아래와 같이 명령합니다.: 
 ```
-sudo mkfs.ext4 -L datapartition <DEVICE_PATH> 
+sudo mkfs.ext4 -L datapartition /dev/sdb 
 ```
 
-This will create the file system on the entire disk. Enter y when prompted with 'Proceed anyway'
+**NOTE:** 실습에서는 파티션을 구성하지 않고 전체 디스크를 사용합니다. Proceed anyway? y 를 입력하십시오
 
-**NOTE:** For this lab we will not be creating additional partitions
 
-7. Create a directory where the disk will be mounted,Enter commands:
+
+7. 디스크의 마운트 포인트를 생성 하십시오:
 ```
 sudo mkdir -p /mnt/www/html            
 ```
 
-8. Mount the disk to the newly created directory,
-Enter command:
+8. 생성된 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
 ```
-sudo mount  /dev/<VOLUME_NAME>  /mnt/www/html
+sudo mount /dev/sdb /mnt/www/html
 ```
 
-9. Verify /dev/<VOLUME_NAME> volume is now mounted to /mnt/www/html directory, Enter command 
+9. lsblk명령어로  /dev/sdb 볼륨이 /mnt/www/html 디렉토리에 마운트 되었는지 확인하십시오. 
 ```
 lsblk 
 ```
-(in this case the volume is called sdc)
+<img src="/img/Customer_Lab_006-1.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_006.PNG" alt="image-alt-text">
-
-10. Next we will download an app and install it. Enter command:
+10. 다음으로 아래 위치에서 App을 다운로드 할 것입니다.
 ```
 cd /home/opc
 ```
-11. Enter Command:
+11. wget 명령으로 아래 url 경로에 있는 App 패키지를 다운로드 하십시오:
 ```
 wget https://github.com/snafuz/oci-quickstart-lab/archive/master.zip
 ```
-12. Enter Command: 
+12. 받은 파일을 unzip으로 압축을 해제 하십시오: 
 ```
 unzip master.zip
 ```
 
-13. Enter Command:
+13. 압축이 풀린 웹 컨텐츠를 Document Root가 될 마운트 포인트로 복사 하십시오:
 ```
 sudo cp -R oci-quickstart-lab-master/static/* /mnt/www/html/
 ```
 
-14. Modify httpd.conf file, Enter Command:
+14. vi로 httpd.conf 파일을 수정하십시오:
 ```
-sudo vi /etc/httpd/conf/httpd.conf (for vi) 
+sudo vi /etc/httpd/conf/httpd.conf 
 ```
-OR 
-```
-sudo nano  /etc/httpd/conf/httpd.conf  (for nano)
-```
-
-**NOTE:** in vi you can save the file after modification by using Esc :wq 
-
-15. Search for string /var/www and replace it with /mnt/www/html . This will be done in 3 locations
+15.  문자열 /var/www을 검색하여 /mnt/www/html로 바꾸십시오.  총 3 군데의 수정지점이 있습니다. 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_007.PNG" alt="image-alt-text">
 
-16. Save and Exit (in vi user Esc :wq)
+16. 파일을 저장하고 빠져 나갑니다. (Esc :wq!)
 
-17. Enter command:
+17. chcon 명령어로 SELinux에서 웹 컨텐츠의 보안 컨텍스트를 설정하십시오:
 ```
 sudo chcon -R --type=httpd_sys_rw_content_t /mnt
 ```
 
-18. Restart httpd server, Enter command:
+18. http 서비스를 재시작 하십시오:
 ```
 sudo systemctl restart httpd 
 ```
 
-19. Launch a web browser and Enter compute Instance's public IP:
+19. 웹 브라우저에서 각자의 인스턴스의 Public IP 주소로 접속을 하십시오:
 ```
 http://<COMPUTE_INSTANCE_PUBLIC_IP>
 ```
@@ -380,72 +360,75 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_008.PNG" alt="image-alt-text">
 
-**We have initialized httpd.conf file. Next we will create a second compute instance using the boot volume of the first compute instance and attach Block Volume to it**
+**이상으로 우리는 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음으로 부가 선택 항목으로써 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
 
-## OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume
+## 옵션: 블록 볼륨을 분리하고 부트 볼륨을 사용하여 두 번째 컴퓨팅 인스턴스를 시작하고 기존의 블록 볼륨을 연결하기
 
-**In this section we will detach the block volume, Stop the compute instance, use its boot volume to launch a second compute instance and delete the second compute instance**
+**이 섹션에서는 블록 볼륨을 분리하고 컴퓨팅 인스턴스를 중지하고 부팅 볼륨을 사용하여 두 번째 컴퓨팅 인스턴스를 시작하고 두 번째 컴퓨팅 인스턴스를 삭제합니다**.
 
-1. In ssh session to the compute instance unmount the directory from block volume, Enter command:
+1. ssh 세션에서 연결된 블록 볼륨의 마운트를 해제 하십시오:
 ```
-sudo umount /dev/<VOLUME_NAME> 
+sudo umount /dev/sdb 
 ```
-2. In OCI console window, Click your compute instance name and in **Attached Block Volume** section  Click the action icon and **Click Detach**
+2. OCI 콘솔 윈도우에서, Compute 인스턴스 이름을 클릭하고  **Attached Block Volume** 섹션의 액션 아이콘에서 **Detach**를 클릭 하십시오.(팝업 창에 OK 확인 버튼을 한번 더  누릅니다)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_009.PNG" alt="image-alt-text">
 
-3. Stop your compute instance by Clicking **Stop** in compute instance details page and then **OK** in Confirm window
+3. Compute 인스턴스에서  **Stop** 버튼과 **OK** 확인창 버튼을 차례로 클릭하십시오.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_010.PNG" alt="image-alt-text">
+<img src="/img/Customer_Lab_010.PNG" alt="image-alt-text">
 
-4. Once the instance is in Stopped state, Click **Boot Volume**, Click action icon and Click **Detach**. Click **OK** in Confirm window.
+4. 인스턴스가 정지 상태에 있으면, **Boot Volume**을 클릭하고 오른쪽 액션 아이콘에 **Detach**와 **OK** 확인 버튼을 차례로 클릭하십시오. (이제 인스턴스는 중지 상태이고 부트 볼륨은 분리되었습니다)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_011.PNG" alt="image-alt-text">
 
-5. Once the Boot volume is detached, Click **Terminate** to Terminate the instance.
+5. 부트 볼륨이 완전히 분리되었으면 인스턴스 상세의 액션 메뉴에서 **Terminate**버튼을 클릭하고 팝업창에서 **Terminate Instance**를 한번 더 확인합니다. 이때 팝업창 내에 **Permanently delete the attached Boot Volume**항목은 체크하지 않습니다.
 
-6. Click the action icon, Click **View Boot Volume Details**.
+   <img src="/img/Customer_Lab_010-2.PNG" alt="image-alt-text">
+
+   
+
+6. Boot Volume의 액션 아이콘에서 **View Boot Volume Details**를 클릭 하십시오
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_012.PNG" alt="image-alt-text">
 
-7. In the Boot Volume Details window Click **Create Instance:**
+7. Boot Volume Details 창의 상단 메뉴중에 **Create Instance:**버튼을 클릭하십시오.
 
-- **Name your instance**: Enter a name 
-- **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
-- **Availability Domain**: Select availability domain
+- **Name your instance**: 새롭게 생성할 인스턴스 이름을 입력.
+- **Choose an operating system or image source**: 기본 유지 (첫번째 인스턴스의 부트 볼륨)
+- **Availability Domain**: 가용성 도메인을 선택
 
-**NOTE :** Boot Volume field is set to BOOT VOLUME and to the boot volume you detached from the original Instance.
+- **Instance Type**: Virtual Machine을 선택.
+- **Instance Shape**: VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 중에 선택가능한 Shape을 지정합니다.
 
-- **Instance Type**: Select Virtual Machine 
-- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+**Configure Networking**
 
-**Under Configure Networking**
-- **Virtual cloud network compartment**: Select your compartment
-- **Virtual cloud network**: Choose the VCN 
-- **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the first Subnet
-- **Use network security groups to control traffic** : Leave un-checked
-- **Assign a public IP address**: Check this option
-- **Boot Volume:** Leave the default
-- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+- **Virtual cloud network compartment**: VCN Compartment를 선택
+- **Virtual cloud network**: VCN 선택
+- **Subnet Compartment:** Subnet Compartment 선택 
+- **Subnet:** VCN 생성시 함께 생성된 기본 Subnet을 선택
+- **Use network security groups to control traffic** : 기본옵션(Un-cheched)을 유지
+- **Assign a public IP address**: 선택
+- **Boot Volume:** 기본 옵션을 유지
+- **Add SSH Keys:** 위에서 생성한 Public key를 파일로 선택하거나 혹인 직접 붙여넣기 
 
 
-8. Click **Create Instance**.
+8. **Create Instance** 버튼을 눌러서 인스턴스를 생성.
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR Choose a different AD
+   
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_013.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_014.PNG" alt="image-alt-text">
 
-9. Once the instance is in Running state, attach the block volume to this new instance using OCI Console.**Ensure to use Paravirtualized mode.**
+9. 인스턴스가 Running 상태가 되면 블록 볼륨을 연결하십시오 . 두번째 인스턴스에서 **Attach Block Volume**을 클릭하십시오.(모든 옵션은 위에 생성한 설정과 동일)
 
-10. ssh to compute instance and mount the block volume as before, Enter Command:
+10. 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
 ```
-sudo mount  /dev/<VOLUME_NAME>  /mnt/www/html
+sudo mount /dev/sdb /mnt/www/html
 ```
 
-11. Restart httpd, Enter command
+11. httpd 섭스를 재시작 하십시오
 ```
 sudo systemctl restart httpd
 ```

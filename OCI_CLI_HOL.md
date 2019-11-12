@@ -150,6 +150,7 @@ RSA key pair’. Press Enter and accept default options for directories. Press E
      # ls
      ```
     
+
 Verify the API key files and OCI CLI config files exist.
 
 19. Enter command
@@ -270,7 +271,7 @@ Compare the finger print in the output of config file to the one in OCI console 
 
 
     `# oci compute instance launch --availability-domain <your AD name> --display-name demo-instance --image-id <ID from previous step> --subnet-id <subnet OCID> --shape VM.Standard.E2.1 --assign-public-ip true --metadata '{"ssh_authorized_keys": "<your public ssh key here>"}'`
-
+    
     Capture the ``id:`` of the compute instance launch output.
 
 3. Check the status of the instances
@@ -306,35 +307,41 @@ https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html
 ## Appendix A: Create an SSH key pair
 
 **For Mac OS**
-1. Open terminal Window
-2. Type ``ssh-keygen`` at the prompt.
-3. Press *enter* to accept default values
-4. **Do not** assign a password for this exercise. (*note* you should always assign an SSH key password in production)
-5. Type ``cat ~/.ssh/id_rsa.pub`` to retrieve your public key.  Save it for future use.
-6. Begin the first exercise - [Practice 1: Sign in to OCI Console and create a VCN](#practice-1-sign-in-to-oci-console-and-create-a-vcn)
 
-**For Windows: Using GitBash or Windows Subsystem for Linux (WSL)**
-1. Open the terminal tool of your choice
-2. Type ``ssh-keygen`` at the prompt.
-3. Press *enter* to accept default values
-4. **Do not** assign a password for this exercise. (*note* you should always assign an SSH key password in production)
-5. Type ``cat ~/.ssh/id_rsa.pub`` to retrieve your public key.  Save it for future use.
-6. Begin the first exercise - [Practice 1: Sign in to OCI Console and create a VCN](#practice-1-sign-in-to-oci-console-and-create-a-vcn)
+1. Terminal Window 
+2. 프롬프트에서 ``ssh-keygen`` 을 입력
+3. 기본 값으로 *enter*를 입력
+4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오. 
+5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
 
-**For Windows: Using PuttyGen**
-1. Open PuttyGen
-2. Click the [Generate] button
-3. Move your mouse around the screen randomly until the progress bar reaches 100%
+**For Windows: GitBash 또는 Windows Subsystem for Linux (WSL)**
+
+1. 선호하는 Terminal 도구를 사용하며 이하 과정은 Mac OS & Linux 환경에서와 동일 합니다.
+
+2. 프롬프트에서 ``ssh-keygen`` 을 입력
+
+3. 기본 값으로 *enter*를 입력
+
+4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오.
+
+5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
+
+   <img src="img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
+
+   
+
+**For Windows: PuttyGen 사용하기**
+
+1. PuttyGen 열기
+2. [Generate] 버튼 클릭
+3. 진행률 표시 줄이 100 %에 도달 할 때까지 마우스를 화면에서 임의로 움직입니다. 
    
     ![](img/puttygen-generate.jpg)
 
-4. Click the [Save private key] button.  This file will *not* have an extension.
+4. [Save private key] 버튼을 누릅니다. 이 파일은 확장자가 주어져 있지 않습니다.
 
     ![](img/puttygen-saveprivatekey.jpg)
 
 
-5. Save the public key (displayed in the text field) by copying it to the clipboard and saving it manually to a new text file.  Name the file id_rsa.pub
+5. 텍스트 필드에 표시된 Public key를 복사하고 수동으로 새 텍스트 파일에 저장하고 파일 이름을 id_rsa.pub로 지정하십시오.
 
-    **Note:** Sometimes PuttyGen does not save the public key in the correct format.  The text string displayed in the window is correct so we just copy/paste.
-
-6. Begin the first exercise - [Practice 1: Sign in to OCI Console and create a VCN](#practice-1-sign-in-to-oci-console-and-create-a-vcn)
