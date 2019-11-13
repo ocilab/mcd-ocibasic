@@ -252,7 +252,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 
 13. SSH 터미널에서 **"Enter a user OCID:**란에 붙여넣기 합니다. 이어서 **Enter a tenancy OCID:** 입력란이 표기됩니다. 
 
-14. OCI 콘솔창으로 돌아가서 , Click user icon (Top Right of OCI Console Window) and click your Tenancy name, copy the OCID as was done for user OCID. Also note down your region (in this example "us-ashburn-1")
+14. OCI 콘솔창으로 돌아가서 , User 아이콘을 클릭한 다음 Tenancy이름을 클릭합니다. User OCID를 복사한 것과 마찬가지로 Tenancy의 OCID를 복사 하십시오.
 
 ![](/img/user-settings-03.png)
 ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/tenancy-ocid.png)
