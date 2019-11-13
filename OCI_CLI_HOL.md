@@ -20,9 +20,9 @@
 
 ## Overview
 
-Automation is a critical component when it comes to managing Cloud workloads at scale.  Although the OCI UI is user-friendly, many tasks may be repetitive and could further reduce an administrator's effort if they can be automated. The OCI Command Line Interface (CLI) is a toolkit developed in Python that is capable of performing almost any task that can be executed in the OCI UI.  The toolkit runs on Linux, Mac, and Windows, making it easy to write BASH or PowerShell scripts that perform a series of commands when executed.
+자동화는 클라우드 워크로드를 대규모로 관리 할 때 중요한 구성 요소입니다. OCI UI는 사용자에게 친숙하지만 많은 작업이 반복적 일 수 있으며 자동화 될 수있는 경우 관리자의 노력을 더욱 줄일 수 있습니다. CLI (OCI Command Line Interface)는 Python으로 개발 된 툴킷으로, OCI UI에서 실행할 수있는 거의 모든 작업을 수행 할 수 있습니다. 툴킷은 Linux, Mac 및 Windows에서 실행되므로 실행할 때 일련의 명령을 수행하는 BASH 또는 PowerShell 스크립트를 쉽게 작성할 수 있습니다.
 
-This lab will walk you through installation and configuration of the CLI, along with the execution of several create, read, and terminate commands.  Upon completion of this lab you should have a good understanding of how to use the OCI CLI to automate common tasks in OCI.
+이번 실습에서는 CLI의 설치 및 구성과 몇 가지 create, read 및 Terminate 명령의 실행을 안내합니다. 이 실습을 마친 후에는 다음 단계로 OCI CLI를 사용하여 OCI에서 일반적인 작업을 자동화 하는 방법을 안내 합니다.  
 
 ## Pre-Requisites
 
