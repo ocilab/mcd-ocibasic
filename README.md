@@ -76,7 +76,11 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 - **STEP 2**: 사용자, 그룹 및 구획 만들기
 <details>
 <summary><b>STEP 3</b> VCN 생성하기</summary>
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 9f2a7e36456ddd03c69af20ba0c862073c79ccfc
   1. OCI 서비스 메뉴에서 Networking 아래의  **Virtual Cloud Network** 을 클릭하고  **Create Virtual Cloud Network** 버튼을 클릭하십시오.
 
 2. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
@@ -120,7 +124,11 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 7. 하단의 **Add Ingress Rule** 버튼을 누릅니다.
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 9f2a7e36456ddd03c69af20ba0c862073c79ccfc
 </details>
 
 - **STEP 4**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
@@ -134,7 +142,11 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 
+<<<<<<< HEAD
 ​              
+=======
+              
+>>>>>>> 9f2a7e36456ddd03c69af20ba0c862073c79ccfc
 ## Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
 **For Mac OS**
