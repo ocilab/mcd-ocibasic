@@ -65,7 +65,12 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 
+<details>
+<summary><b>STEP 1</b> OCI 콘솔에 로그인</summary>
+> https://www.oracle.com/cloud/sign-in.html 접속 > Tenant 입력 > **Continue** 클릭 > oracleidentitycloudservice 선택(Default) > **Continue** 클릭 > 사용자 이름(User Name)과 암호(Password) 입력 > **Sign In** 클릭
 
+![](img/oci_console_login.gif)
+</details>
 - **STEP 1**:  OCI 콘솔에 로그인
 
 - **STEP 2**: 사용자, 그룹 및 구획 만들기
