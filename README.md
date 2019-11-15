@@ -120,11 +120,6 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 7. 하단의 **Add Ingress Rule** 버튼을 누릅니다.
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 9f2a7e36456ddd03c69af20ba0c862073c79ccfc
 </details>
 
 - **STEP 4**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
@@ -138,11 +133,6 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 
-<<<<<<< HEAD
-​              
-=======
-              
->>>>>>> 9f2a7e36456ddd03c69af20ba0c862073c79ccfc
 ## Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
 **For Mac OS**
