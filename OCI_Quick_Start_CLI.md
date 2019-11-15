@@ -1,73 +1,79 @@
-# OCI Quick Start (VCN, Compute and Block Volume)
+# 나 혼자 시작하는 Oracle Cloud 첫걸음: Free Tier계정을 이용한 오라클 클라우드 기본 서비스 생성
 
-## Table of Contents
+Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
-[개요](#개요)
+![](img/header_redwood_1.png)
 
-[미리 알아두면 좋은 것 들](#미리-알아두면-좋은-것-들)
+## 과정 소개
 
-[OCI 콘솔에 로그인하여 VCN 생성](#OCI-콘솔에-로그인하여-VCN-생성)
-
-[Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#create-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
-
-[Install httpd on compute instance and install an app on Block Volume](#install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
-
-[OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
-
-[Delete the resources](#delete-the-resources)
-
-[Appendix A: ISCSI Method to Attach Block Volume to Compute Instance](#appendix-a-iscsi-method-to-attach-block-volume-to-compute-instance)
-
-[Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
-
-## 개요
-
-In this lab we will create a compute instance, install httpd server on it, attach block volume to it and install an app on the Block Volume
-We will then create a second compute instance using the boot volume of the first compute instance and move the Block Volume to 
-the second compute instance (with the app installed).
-The goal of the lab is to demonstrate launching VCN, Compute Instance, using Boot volume of compute instance and 
-how easy it is to move additional storage with applicatons/tools installed between compute instances
-
-**Some Key points;**
-
-**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+본 핸즈온 과정은 Oracle Cloud Infrastructure를 처음 접하는 분이라도 누구나 쉽게 클라우드를 배포하고 구성하여 간단한 애플리케이션을 테스트 해 볼 수 있도록 쉬운 내용을 다루고 있으며 가장 기본이 되는 Network, Compute, Storage 리소스에 일반적인 설정으로 즉시 테스트 또는 운영환경으로 사용 할 수 있도록 구성하였습니다. 
 
 
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
-
-- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
-
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
-
-**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
-
-## 미리 알아두면 좋은 것 들
-
-1. OCI의 계정 정보 (User, Password, Tenant, and Compartment)  
-
-2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
-
-3. OCI 콘솔에 대한 사전 경험: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
-
-4. 네트워킹 정보: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
-
-5. Compartment에 대한 이해: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
-
-6. Compute 인스턴스에 접속: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 
-## OCI 콘솔에 로그인하여 VCN 생성
+## 사전 준비 사항
 
 
+* 인터넷 접속 가능한 랩탑
+* OCI (Oracle Cloud Infrastructure) 계정
+* SSH Terminal (windows Putty, macOS Terminal 등)
+
+
+
+## 실습 단계
+<details>
+<summary>**시작에 앞서**:  Oracle Free Tier 계정 생성 절차 보기</summary>
+지난 9월에 열렸던 Oracle Open World 2019에서 발표되었던 Oracle Free Tier는 기존의 한달동안 300달러 상당의 무료 계정에서 확대하여 기간 제약없이 사용 할 수 있는 Always Free Tier를 확대하여 제공하기로 하였습니다. 
+><img src="img/always_free1.png" width="80%">
+
+>http://www.oracle.com 에 접속한 뒤 우측 상단의 [Oracle Cloud Free Tier]를 클릭하고 좌측 하단의[Start for free]버튼을 클릭합니다.
+><img src="img/always_free2.png" width="80%">
+
+>이메일 주소와 현재 위치한 지역정보 그리고 이용에 대한 동의를 체크하시고 "Next" 버튼을 클릭 합니다.
+> <img src="img/always_free3.png" width="80%">
+
+>클라우드 계정정보를 포함한 필수 항목을 모두 기입하고 "Next"버튼을 클릭 하십시오.
+><img src="img/always_free4.png" width="80%">
+
+>앞에서 입력한 값이 맞으면 "Use Original"을 클릭하여 다음으로 넘어갑니다.
+><img src="img/always_free5.png" width="80%">
+
+>등록한 전화번호로 인증 SMS가 발송되면 확인하고 "Verify Code"버튼을 눌러 다음으로 넘어갑니다.
+><img src="img/always_free6.png" width="80%">
+
+>요구되는 규칙의 패스워드를 입력하고 "Next" 카드 입력 정보로 넘어갑니다.
+><img src="img/always_free7.png" width="80%">
+
+>"Add Credit Card Details"를 입력하여 카드 정보 입력 화면으로 넘어갑니다. 
+><img src="img/always_free8.png" width="80%">
+
+>그림과 같이 카드의 정보를 기입합니다. 카드는 인증의 용도로만 사용되고 Free Tier 사용과 관련해서 어떠한 결제도 발생하지 않습니다. 
+><img src="img/always_free9.png" width="80%">
+>
+>해외 승인에 이어서 같은 금액의 승인 취소 내역을 곧바로 확인 할 수 있습니다.
+><img src="img/always_free10.png" width="80%">
+
+>오라클 클라우드 사용에 대한 동의를 체크하는 것을 마지막으로 Oracle Free Tier 생성 과정은 마무리 됩니다. 마지막으로 카드 결제는 Free Tier 사용자가 업그레이드를 하지 않는 한 결제되지 않을 것임을 다시 한번 강조하고 있습니다. 
+><img src="img/always_free11.png" width="80%">
+
+>생성한 계정을 통해서 Free Tier 환경에 정상적으로 로그인을 합니다.
+><img src="img/always_free12.png" width="80%">
+><img src="img/always_free13.png" width="80%">
+</details>
+
+
+
+
+
+**STEP 1**:  OCI 콘솔에 로그인
+**STEP 2**:  VCN 생성하기
+**STEP 3**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
+**STEP 4**:  블록 볼륨을 인스턴스에 연결
+**STEP 5**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+**APPENDIX**: 
+
+
+* 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
