@@ -65,14 +65,16 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 <details>
-<summary><b>STEP 1</b> OCI 콘솔에 로그인</summary>
+<summary> OCI 콘솔에 <b>로그인</b></summary>
 > https://www.oracle.com/cloud/sign-in.html 접속 > Tenant 입력 > **Continue** 클릭 > oracleidentitycloudservice 선택(Default) > **Continue** 클릭 > 사용자 이름(User Name)과 암호(Password) 입력 > **Sign In** 클릭
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/oci_console_login.gif" alt="image-alt-text">
-</details>
+></details>
 
+<details>
+<summary> 사용자, 그룹 및 Compartment 설명</summary>
+설명 장표 추가 예정
+></details>
 
-
-- **STEP 2**: 사용자, 그룹 및 Compartment 설명
 <details>
 <summary><b>STEP 3</b> VCN 생성하기</summary>
 
@@ -99,8 +101,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
-              
-</details>
+></details>
 
 <details>
 <summary><b>STEP 4</b> 보안 목록에 서비스 포트 허용</summary>
@@ -131,12 +132,9 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 - **STEP 5**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
-
 - **STEP 6**:  블록 볼륨을 인스턴스에 연결
-
 - **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
-  **APPENDIX**
-
+- **APPENDIX**
 
 
 
