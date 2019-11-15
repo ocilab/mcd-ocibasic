@@ -68,14 +68,15 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 <details>
 <summary><b>STEP 1</b> OCI 콘솔에 로그인</summary>
 > https://www.oracle.com/cloud/sign-in.html 접속 > Tenant 입력 > **Continue** 클릭 > oracleidentitycloudservice 선택(Default) > **Continue** 클릭 > 사용자 이름(User Name)과 암호(Password) 입력 > **Sign In** 클릭
-
 ![](img/oci_console_login.gif)
 </details>
-- **STEP 1**:  OCI 콘솔에 로그인
+
+
 
 - **STEP 2**: 사용자, 그룹 및 구획 만들기
-
-- **STEP 3**: VCN 생성하기
+<details>
+<summary><b>STEP 3</b> VCN 생성하기</summary>
+>
 
 - **STEP 4**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
 
@@ -95,33 +96,22 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
   
 
-  
-
-
-  * **Tenant Name:** {{Cloud Tenant}}
-  * **User Name:** {{User Name}}
-  * **Password:** {{Password}}
-  * **Compartment:**{{Compartment}}
 
 
 
-1. 테넌트 이름과 오른쪽 하단의 **Oracle Cloud Infrastructure** 아래에 사용자 이름 그리고 패스워드를 이용하여 로그인 하십시오.
+1. OCI 서비스 메뉴에서 Networking 아래의  **Virtual Cloud Network** 을 클릭하고  **Create Virtual Cloud Network** 버튼을 클릭하십시오.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
-
-2. OCI 서비스 메뉴에서 Networking 아래의  **Virtual Cloud Network** 을 클릭하고  **Create Virtual Cloud Network** 버튼을 클릭하십시오.
-
-3. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
+2. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
 
 **참고:* COMPARTMENT 목록에서 올바른 Compartment가 선택되었는지 확인 하십시오.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
-
-4. 대화 상자를 채우세요:
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
 
+
+3. 아래의 대화 상자를 채우십시오.
 
 - **Create in Compartment:** Has the correct compartment
 - **Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
@@ -129,9 +119,9 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 - **Create Virtual Cloud Network** 을 클릭하여 리소스를 생성합니다. 
 - **Close** 버튼을 누르고 종료 합니다.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
               
 
 5. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
