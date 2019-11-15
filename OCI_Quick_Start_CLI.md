@@ -29,6 +29,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 >http://www.oracle.com 에 접속한 뒤 우측 상단의 [Oracle Cloud Free Tier]를 클릭하고 좌측 하단의[Start for free]버튼을 클릭합니다.
 ><img src="img/always_free2.png" width="80%">
 
+
 >이메일 주소와 현재 위치한 지역정보 그리고 이용에 대한 동의를 체크하시고 "Next" 버튼을 클릭 합니다.
 > <img src="img/always_free3.png" width="80%">
 
@@ -65,19 +66,36 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 
-**STEP 1**:  OCI 콘솔에 로그인
-**STEP 2**:  VCN 생성하기
-**STEP 3**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
-**STEP 4**:  블록 볼륨을 인스턴스에 연결
-**STEP 5**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
-**APPENDIX**: 
+- **STEP 1**:  OCI 콘솔에 로그인
+
+- **STEP 2**:  VCN 생성하기
+
+- **STEP 3**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
+
+- **STEP 4**:  블록 볼륨을 인스턴스에 연결
+
+- **STEP 5**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+
+- **APPENDIX**: 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
-* 
-* **Tenant Name:** {{Cloud Tenant}}
-* **User Name:** {{User Name}}
-* **Password:** {{Password}}
-* **Compartment:**{{Compartment}}
+  * **Tenant Name:** {{Cloud Tenant}}
+  * **User Name:** {{User Name}}
+  * **Password:** {{Password}}
+  * **Compartment:**{{Compartment}}
+
 
 
 1. 테넌트 이름과 오른쪽 하단의 **Oracle Cloud Infrastructure** 아래에 사용자 이름 그리고 패스워드를 이용하여 로그인 하십시오.
