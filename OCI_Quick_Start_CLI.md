@@ -22,7 +22,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 ## 실습 단계
 <details>
-<summary>**시작에 앞서**:  Oracle Free Tier 계정 생성 절차 보기</summary>
+<summary><b>시작에 앞서</b>:  Oracle Free Tier 계정 생성 절차 보기</summary>
 지난 9월에 열렸던 Oracle Open World 2019에서 발표되었던 Oracle Free Tier는 기존의 한달동안 300달러 상당의 무료 계정에서 확대하여 기간 제약없이 사용 할 수 있는 Always Free Tier를 확대하여 제공하기로 하였습니다. 
 ><img src="img/always_free1.png" width="80%">
 
@@ -68,13 +68,15 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 - **STEP 1**:  OCI 콘솔에 로그인
 
-- **STEP 2**:  VCN 생성하기
+- **STEP 2**: 사용자, 그룹 및 구획 만들기
 
-- **STEP 3**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
+- **STEP 3**: VCN 생성하기
 
-- **STEP 4**:  블록 볼륨을 인스턴스에 연결
+- **STEP 4**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
 
-- **STEP 5**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+- **STEP 5**:  블록 볼륨을 인스턴스에 연결
+
+- **STEP 6**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
 
 - **APPENDIX**: 
 
