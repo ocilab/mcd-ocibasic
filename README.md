@@ -100,12 +100,15 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
               
+</details>
 
-5. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
+<details>
+<summary><b>STEP 4</b> 보안 목록에 서비스 포트 허용</summary>
+1. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text">
 
-6. **Ingress Rules**아래에 **Add Ingress Rule**을 클릭하고 아래의 규칙을 추가합니다.:
+2. **Ingress Rules**아래에 **Add Ingress Rule**을 클릭하고 아래의 규칙을 추가합니다.:
 
 
 - **STATELESS** 체크박스는 사용하지 않음으로 기본을 유지
@@ -115,19 +118,25 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** 80
 
+
+
+3. 하단에 **Add Ingress Rule** 버튼을 누릅니다.
+
 <img src="img/Customer_Lab_002-1.PNG" alt="image-alt-text">
 
 
-7. 하단의 **Add Ingress Rule** 버튼을 누릅니다.
+
 </details>
 
-- **STEP 4**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
 
-- **STEP 5**:  블록 볼륨을 인스턴스에 연결
 
-- **STEP 6**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+- **STEP 5**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
 
-- **APPENDIX**: 
+- **STEP 6**:  블록 볼륨을 인스턴스에 연결
+
+- **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+  **APPENDIX**
+
 
 
 
