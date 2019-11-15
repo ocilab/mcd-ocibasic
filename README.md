@@ -76,7 +76,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 ></details>
 
 <details>
-<summary><b>STEP 3</b> VCN 생성하기</summary>
+<summary><b> VCN 생성</b>하기</summary>
 
 1. OCI 서비스 메뉴에서 Networking 아래의  **Virtual Cloud Network** 을 클릭하고  **Create Virtual Cloud Network** 버튼을 클릭하십시오.
 
