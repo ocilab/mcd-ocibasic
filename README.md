@@ -195,6 +195,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 	
 	**참고**: 실습환경의 기본 선택 사항이 설정되어 있습니다.
 	
+
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance2.PNG" alt="image-alt-text">
 
 3. **Configure Networking**
@@ -206,19 +207,21 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 - **Subnet:** (VCN생성시 함께 생성된 기본 Subnet)
 - **Use network security groups to control traffic** :(Un-checked)
 - **Assign a public IP address**: 옵션을 선택합니다.
+
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance3.PNG" alt="image-alt-text">
-- 
-- 
-- 
+
 4. **Boot Volume:** 기본 옵션을 유지
 5. **Add SSH Keys:** 위에서 생성한 Public key를 선택하거나 혹은 직접 붙여넣기를 합니다.
-	**Create**버튼을 눌러서 인스턴스를 생성합니다.
-	
+6. **Create**버튼을 눌러서 인스턴스를 생성합니다.
+
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance4.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+7. **Provisioning**상태에서 **Running** 상태가 될 때까지 잠시 기다립니다.
 
-10. 터미널에서 Private key가 위치한 곳에서 대기하고 인스턴스가  **Running** 상태가 될 때까지 기다립니다. 
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance7.PNG" alt="image-alt-text">
+
+8. **Public IP**를 이용하여 Putty로 로그인 합니다.
+
 
 </details>
 
