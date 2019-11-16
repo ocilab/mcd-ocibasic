@@ -420,10 +420,9 @@ sudo umount /dev/sdb
 9. **Create Instance** 버튼을 눌러서 인스턴스를 생성 하십시오.
 
    
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bookvol5.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_013.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_014.PNG" alt="image-alt-text">
 
 9. 인스턴스가 Running 상태가 되면 블록 볼륨을 연결하십시오 . 두번째 인스턴스에서 **Attach Block Volume**을 클릭하십시오.(모든 옵션은 위에 생성한 설정과 동일)
 
@@ -444,80 +443,7 @@ sudo systemctl restart httpd
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/img/Customer_Lab_015.PNG" alt="image-alt-text">
 
-**We have now successfully launched a compute instance using another instance's boot volume and re-attached a block volume that was attached to another instance. The block volume preserved all the data on it during this process. Moreover the compute instance launched using the boot volume had httpd server and fire wall configuration already present**
+**** 이제 다른 인스턴스의 부팅 볼륨을 사용하여 컴퓨팅 인스턴스를 성공적으로 시작하고 다른 인스턴스에 연결된 블록 볼륨을 다시 연결했습니다. 이 프로세스 동안 블록 볼륨은 모든 데이터를 보존했습니다. 또한 부트 볼륨을 사용하여 시작된 컴퓨팅 인스턴스에는 httpd 서버 및 방화벽 구성이 이미 존재합니다 ****
 
 </details>
 
-## Delete the resources
-
-1. Switch to  OCI console window
-
-2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
-
-3. Locate first compute instance, Click Action icon and then **Terminate** 
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
-
-4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
-
-5. Repeat the step to delete second compute instance
-
-6. From OCI services menu Click **Block Volumes** under Block Storage
-
-7. Find the storage block volume you created.
-
-**HINT:** If multiple storage block volumes are listed, scroll down to find the one you created.   
-
-8. Click the Action icon and select **Terminate**
-
-9. Click OK in the confirmation window.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_016.PNG" alt="image-alt-text">
-
-10. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
-appear.
-
-11. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
-
-
-***Congratulations! You have successfully completed the lab. ***
-
-## Appendix A: ISCSI Method to Attach Block Volume to Compute Instance
-
-1. Click Action icon for the Block Volume, then **ISCSI Commands & Information**
-
-**NOTE:** The iSCSI Commands and Information dialog box displays specific identifying information about your volume and the iSCSI commands you'll need. The commands are ready to use with the appropriate information included. You can copy and paste the commands into your instance once you login.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_017.PNG" alt="image-alt-text">
-
-2. Click **Copy** in **ATTACH COMMANDS** section. 
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_018.PNG" alt="image-alt-text">
-
-3. Click **Close** to close the window 
-
-4. In OCI Console Window, Click the Apps icon and Click Notepad. 
-
-**HINT:** You can swap between the OCI window and any other application (Notepad etc.) by Clicking the Switch Window icon
-
-5. Paste the ISCSI commands in Notepad using your mouse/touch pad or Ctrl v. 
-
-**To attach ssh to the compute instance and paste the ISCSI commands copied earlier**
-
-## Appendix B: ISCSI Method to Detach block volume
-
-1. Click Action icon for the Block Volume, then **ISCSI Commands & Information**
-
-2. Click **Copy** in **DETACH COMMANDS** section. 
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_019.PNG" alt="image-alt-text">
-
-3. Paste the detach command in the ssh session to the compute instance
-
-4. In OCI console window, Click your compute instance name and in **Attached Block Volumes** section Click the action icon and Click **Detach**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_020.PNG" alt="image-alt-text">
