@@ -136,6 +136,13 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 </details>
 
+<details>
+<summary><b>인스턴스를 생성</b>하고 간단한 <b>애플리케니션</b>을 설치</summary>
+
+
+
+</details>
+
 - **STEP 5**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
 - **STEP 6**:  블록 볼륨을 인스턴스에 연결
 - **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
