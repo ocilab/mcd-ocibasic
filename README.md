@@ -106,18 +106,23 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 **3. Create Virtual Cloud Network** 버튼을 클릭하여 리소스를 생성합니다.. 
 
-**Close** 버튼을 누르고 종료 합니다.
+
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
+
+
+**4. Close** 버튼을 누르고 종료 합니다.
+
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
+
 ></details>
 
 <details>
 <summary><b>보안 목록</b>에 서비스 포트 허용</summary>
 1. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_001.PNG" alt="image-alt-text">
 
 2. **Ingress Rules**아래에 **Add Ingress Rule**을 클릭하고 아래의 규칙을 추가합니다.:
 
