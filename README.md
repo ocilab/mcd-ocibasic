@@ -80,11 +80,17 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 1. OCI 서비스 메뉴에서 Networking 아래의  **Virtual Cloud Network** 을 클릭하고  **Create Virtual Cloud Network** 버튼을 클릭하십시오.
 
-2. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
 
-**참고:* COMPARTMENT 목록에서 올바른 Compartment가 선택되었는지 확인 하십시오.
+
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+
+
+
+2. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
+   **참고:* 본 실습의 환경에는 "MCD"라는 Compartment가 미리 설정되어 있습니다.
+
+   
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
@@ -92,11 +98,15 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 3. 아래의 대화 상자를 채우십시오.
 
-- **Create in Compartment:** Has the correct compartment
-- **Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
-- **Create Virtual Cloud Network Plus Related Resources:** 이 옵션을 선택 합니다.
-- **Create Virtual Cloud Network** 을 클릭하여 리소스를 생성합니다. 
-- **Close** 버튼을 누르고 종료 합니다.
+**1. Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
+
+​		**Create in Compartment:** MCD 이름이 정상적으로 지정되어 있는지 확인 하십시오.
+
+**2. Create Virtual Cloud Network Plus Related Resources:** 옵션을 선택 합니다.
+
+**3. Create Virtual Cloud Network** 버튼을 클릭하여 리소스를 생성합니다.. 
+
+**Close** 버튼을 누르고 종료 합니다.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
