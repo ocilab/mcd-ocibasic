@@ -57,7 +57,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 >오라클 클라우드 사용에 대한 동의를 체크하는 것을 마지막으로 Oracle Free Tier 생성 과정은 마무리 됩니다. 마지막으로 카드 결제는 Free Tier 사용자가 업그레이드를 하지 않는 한 결제되지 않을 것임을 다시 한번 강조하고 있습니다. 
 ><img src="img/always_free11.png" width="80%">
 
->생성한 계정을 통해서 Free Tier 환경에 정상적으로 로그인을 합니다.ㅎ
+>생성한 계정을 통해서 Free Tier 환경에 정상적으로 로그인을 합니다.
 ><img src="img/always_free12.png" width="80%">
 ><img src="img/always_free13.png" width="80%">
 ></details>
@@ -104,7 +104,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 **2. Create Virtual Cloud Network Plus Related Resources:** 옵션을 선택 합니다.
 
-**3. Create Virtual Cloud Network** 버튼을 클릭하여 리소스를 생성합니다.. 
+**3. Create Virtual Cloud Network** 버튼을 클릭하여 리소스를 생성합니다.
 
 
 
@@ -124,7 +124,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_001.PNG" alt="image-alt-text">
 
-2. **Ingress Rules**아래에 **Add Ingress Rule**을 클릭하고 아래의 규칙을 추가합니다.:
+2. **Ingress Rules**아래에 **Add Ingress Rule**을 클릭하고 아래의 규칙을 추가합니다.
 
 
 - **STATELESS** 체크박스는 사용하지 않음으로 기본을 유지
@@ -236,7 +236,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 - **Create in Compartment:** 올바른 Compartment가 선택되어 있는지 확인 합니다.
 - **Name:** 생성 할 블록볼륨의 이름을 지정하십시오(예 "block_vm)
 - **Availability Domain:** 사용가능한 첫번째 도메인을 선택하십시오 (멀티 AD의 경우에는 연결 할 Compute인스턴스와 동일한 AD에 속하도록 합니다).
-- **SIZE:** 50 (GB 단위의 입력값이며 이 경우 50GB가 설정 됩니다)
+- **SIZE:** 50 (GB 단위의 입력 값이며 이 경우 50GB가 설정 됩니다)
 - **BACKUP POLICY:** 별도로 지정하지 않습니다 (만약 이 필드에서 ‘Error Retrieving Value’ 표기되면 그대로 두고 진행합니다)
 - **Create Block Volume**을 클릭하고 볼륨상태가 Provisioning에서 available이 될 때까지 기다립니다.
 
@@ -246,7 +246,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block3.PNG" alt="image-alt-text">
 
-4. 대화상자를 채운다음 Attach 버튼을 클릭 하십시오.
+4. 대화상자를 채운 다음 Attach 버튼을 클릭 하십시오.
 
 - 블록 볼륨을 연결할 방법을 선택: Paravirtualized
 
@@ -308,7 +308,7 @@ lsblk
 ```
 sudo yum -y install httpd 
 ```
-2. http 트래픽을 허용하기 위해서 방화벽 설정에서 80번 포트 오픈 설정을 하십시오.:
+2. http 트래픽을 허용하기 위해서 방화벽 설정에서 80번 포트 오픈 설정을 하십시오.
 ```
 sudo firewall-cmd --permanent --add-port=80/tcp 
 ```
@@ -349,7 +349,7 @@ sudo vi /etc/httpd/conf/httpd.conf
 ```
 15.  문자열 /var/www을 검색하여 /mnt/www/html로 바꾸십시오.  총 3 군데의 수정지점이 있습니다. 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_007.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_007.PNG" alt="image-alt-text">
 
 16. 파일을 저장하고 빠져 나갑니다. (Esc :wq!)
 
@@ -370,14 +370,18 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 20. Screen like below should appear.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_008.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_008.PNG" alt="image-alt-text">
 
 **이상으로 우리는 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음으로 부가 선택 항목으로써 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
 
 </details>
 
+<details>
+<summary><b>부트 볼륨을 이용하여 새로운 인스턴스로 복원 </b></summary>
 
-- **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+
+
+
 - **APPENDIX**
 
 
@@ -396,7 +400,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 ## 옵션: 블록 볼륨을 분리하고 부트 볼륨을 사용하여 두 번째 컴퓨팅 인스턴스를 시작하고 기존의 블록 볼륨을 연결하기
 
-**이 섹션에서는 블록 볼륨을 분리하고 컴퓨팅 인스턴스를 중지하고 부팅 볼륨을 사용하여 두 번째 컴퓨팅 인스턴스를 시작하고 두 번째 컴퓨팅 인스턴스를 삭제합니다**.
+**이 과정 에서는 블록 볼륨을 분리 한 뒤 인스턴스를 중지하고 부팅 볼륨을 사용하여 두 번째 인스턴스를 시작하여 서비스를 재개 합니다.**.
 
 1. ssh 세션에서 연결된 블록 볼륨의 마운트를 해제 하십시오:
 ```
@@ -404,7 +408,7 @@ sudo umount /dev/sdb
 ```
 2. OCI 콘솔 윈도우에서, Compute 인스턴스 이름을 클릭하고  **Attached Block Volume** 섹션의 액션 아이콘에서 **Detach**를 클릭 하십시오.(팝업 창에 OK 확인 버튼을 한번 더  누릅니다)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_009.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_009.PNG" alt="image-alt-text">
 
 3. Compute 인스턴스에서  **Stop** 버튼과 **OK** 확인창 버튼을 차례로 클릭하십시오.
 
@@ -412,7 +416,7 @@ sudo umount /dev/sdb
 
 4. 인스턴스가 정지 상태에 있으면, **Boot Volume**을 클릭하고 오른쪽 액션 아이콘에 **Detach**와 **OK** 확인 버튼을 차례로 클릭하십시오. (이제 인스턴스는 중지 상태이고 부트 볼륨은 분리되었습니다)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_011.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_011.PNG" alt="image-alt-text">
 
 5. 부트 볼륨이 완전히 분리되었으면 인스턴스 상세의 액션 메뉴에서 **Terminate**버튼을 클릭하고 팝업창에서 **Terminate Instance**를 한번 더 확인합니다. 이때 팝업창 내에 **Permanently delete the attached Boot Volume**항목은 체크하지 않습니다.
 
@@ -422,7 +426,7 @@ sudo umount /dev/sdb
 
 6. Boot Volume의 액션 아이콘에서 **View Boot Volume Details**를 클릭 하십시오
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_012.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_012.PNG" alt="image-alt-text">
 
 7. Boot Volume Details 창의 상단 메뉴중에 **Create Instance:**버튼을 클릭하십시오.
 
@@ -449,9 +453,9 @@ sudo umount /dev/sdb
 
    
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_013.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_013.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_014.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_014.PNG" alt="image-alt-text">
 
 9. 인스턴스가 Running 상태가 되면 블록 볼륨을 연결하십시오 . 두번째 인스턴스에서 **Attach Block Volume**을 클릭하십시오.(모든 옵션은 위에 생성한 설정과 동일)
 
@@ -460,7 +464,7 @@ sudo umount /dev/sdb
 sudo mount /dev/sdb /mnt/www/html
 ```
 
-11. httpd 섭스를 재시작 하십시오
+11. httpd 서비스를 재시작 하십시오.
 ```
 sudo systemctl restart httpd
 ```
@@ -470,9 +474,11 @@ sudo systemctl restart httpd
 
 13. 아래의 그림과 같이 웹 화면이 브라우징 되면 성공적으로 실습이 완료 된 것입니다. (입력창에 별도의 입력은 필요하지 않습니다)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_015.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/img/Customer_Lab_015.PNG" alt="image-alt-text">
 
 **We have now successfully launched a compute instance using another instance's boot volume and re-attached a block volume that was attached to another instance. The block volume preserved all the data on it during this process. Moreover the compute instance launched using the boot volume had httpd server and fire wall configuration already present**
+
+</details>
 
 ## Delete the resources
 
