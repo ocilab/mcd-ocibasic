@@ -314,7 +314,7 @@ sudo yum -y install httpd
 ```
 sudo firewall-cmd --permanent --add-port=80/tcp 
 ```
-      (방화벽을 다시 로드하여 규칙을 활성화하십시오.) 
+방화벽을 다시 로드하여 규칙을 활성화하십시오. 
 
 ```
 sudo firewall-cmd --reload 
@@ -370,11 +370,11 @@ sudo systemctl restart httpd
 http://<COMPUTE_INSTANCE_PUBLIC_IP>
 ```
 
-20. Screen like below should appear.
+20. 브라우저에 아래의 이미지가 표시되면 정상 입니다.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_008.PNG" alt="image-alt-text">
 
-**이상으로 우리는 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음으로 부가 선택 항목으로써 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
+**이상으로 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음 실습은 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
 
 </details>
 
@@ -389,15 +389,15 @@ sudo umount /dev/sdb
 ```
 2. OCI 콘솔 윈도우에서, Compute 인스턴스 이름을 클릭하고  **Attached Block Volume** 섹션의 액션 아이콘에서 **Detach**를 클릭 하십시오.(팝업 창에 OK 확인 버튼을 한번 더  누릅니다)
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_009.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol1.PNG" alt="image-alt-text">
 
 3. Compute 인스턴스에서  **Stop** 버튼과 **OK** 확인창 버튼을 차례로 클릭하십시오.
 
-<img src="/img/Customer_Lab_010.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol2.PNG" alt="image-alt-text">
 
 4. 인스턴스가 정지 상태에 있으면, **Boot Volume**을 클릭하고 오른쪽 액션 아이콘에 **Detach**와 **OK** 확인 버튼을 차례로 클릭하십시오. (이제 인스턴스는 중지 상태이고 부트 볼륨은 분리되었습니다)
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_011.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol3.PNG" alt="image-alt-text">
 
 5. 부트 볼륨이 완전히 분리되었으면 인스턴스 상세의 액션 메뉴에서 **Terminate**버튼을 클릭하고 팝업창에서 **Terminate Instance**를 한번 더 확인합니다. 이때 팝업창 내에 **Permanently delete the attached Boot Volume**항목은 체크하지 않습니다.
 
@@ -411,26 +411,13 @@ sudo umount /dev/sdb
 
 7. Boot Volume Details 창의 상단 메뉴중에 **Create Instance:**버튼을 클릭하십시오.
 
-- **Name your instance**: 새롭게 생성할 인스턴스 이름을 입력.
-- **Choose an operating system or image source**: 기본 유지 (첫번째 인스턴스의 부트 볼륨)
-- **Availability Domain**: 가용성 도메인을 선택
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol4.PNG" alt="image-alt-text">
 
-- **Instance Type**: Virtual Machine을 선택.
-- **Instance Shape**: VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 중에 선택가능한 Shape을 지정합니다.
-
-**Configure Networking**
-
-- **Virtual cloud network compartment**: VCN Compartment를 선택
-- **Virtual cloud network**: VCN 선택
-- **Subnet Compartment:** Subnet Compartment 선택 
-- **Subnet:** VCN 생성시 함께 생성된 기본 Subnet을 선택
-- **Use network security groups to control traffic** : 기본옵션(Un-cheched)을 유지
-- **Assign a public IP address**: 선택
-- **Boot Volume:** 기본 옵션을 유지
-- **Add SSH Keys:** 위에서 생성한 Public key를 파일로 선택하거나 혹인 직접 붙여넣기 
-
-
-8. **Create Instance** 버튼을 눌러서 인스턴스를 생성.
+8. **이하의 입력 과정은 인스턴스 생성 과정과 동일하며 Shape 변경, SSH Key 변경 등 그 밖의 파라미터 수정 가능 합니다.
+ 
+ <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol4.PNG" alt="image-alt-text">
+ 
+9. **Create Instance** 버튼을 눌러서 인스턴스를 생성 하십시오.
 
    
 
