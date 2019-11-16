@@ -278,13 +278,15 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 
 1. lsblk 명령을 입력하여 블록 볼륨 스토리지가 초기화 되었는지 확인하십시오. 첫번째로 Attach된 스토리지는 sdb로 표기됩니다. 
-   <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/OCI_Quick_Start001-1.PNG" alt="image-alt-text">
+
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/OCI_Quick_Start001-1.PNG" alt="image-alt-text">
    
 2. 블록 볼륨에 파일시스템을 생성 하도록 아래와 같이 명령합니다.: 
 ```
 sudo mkfs.ext4 -L datapartition /dev/sdb 
 ```
 **NOTE:** 실습에서는 파티션을 구성하지 않고 전체 디스크를 사용합니다. Proceed anyway? y 를 입력하십시오
+
 3. 디스크의 마운트 포인트를 생성 하십시오:
 ```
 sudo mkdir -p /mnt/www/html            
