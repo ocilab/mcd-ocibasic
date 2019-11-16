@@ -104,7 +104,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 ></details>
 
 <details>
-<summary><b>STEP 4</b> 보안 목록에 서비스 포트 허용</summary>
+<summary><b>보안 목록</b>에 서비스 포트 허용</summary>
 1. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text">
@@ -129,7 +129,12 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 </details>
 
+<details>
+<summary><b>SSH Key</b>  다운로드 및 Client(Putty) 설정</summary>
 
+[ssh key 다운로드 링크](), Putty 설정 화면 캡쳐 예정
+
+</details>
 
 - **STEP 5**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
 - **STEP 6**:  블록 볼륨을 인스턴스에 연결
