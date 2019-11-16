@@ -141,13 +141,21 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 
 
+
+
 2. [SSH]탭의 [Auth] 항목에서 [Browse]버튼을 누르고 PC의 Private key를 찾아 선택 하십시오.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty3.PNG" alt="image-alt-text">
 
+
+
+
+
 3. [Session] 탭에서 IP를 입력하고, 다음 접속 시 별도 설정 없이 접속하기 위해서 세션을  저장한 후 **Open**버튼을 눌러서 접속을 하십시오.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty4.png" alt="image-alt-text">
+
+
 
 4. 마지막으로 확인 버튼을 "예" 누르면 접속이 완료 됩니다.
 
@@ -170,50 +178,11 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 
 
-## Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance
-
-**For Mac OS**
-
-1. Terminal Window 
-2. 프롬프트에서 ``ssh-keygen`` 을 입력
-3. 기본 값으로 *enter*를 입력
-4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오. 
-5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
-
-**For Windows: GitBash 또는 Windows Subsystem for Linux (WSL)**
-
-1. 선호하는 Terminal 도구를 사용하며 이하 과정은 Mac OS & Linux 환경에서와 동일 합니다.
-
-2. 프롬프트에서 ``ssh-keygen`` 을 입력
-
-3. 기본 값으로 *enter*를 입력
-
-4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오.
-
-5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
-
-   <img src="C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
-
-   
-
-**For Windows: PuttyGen 사용하기**
-
-1. PuttyGen 열기
-
-2. [Generate] 버튼 클릭
-
-3. 진행률 표시 줄이 100 %에 도달 할 때까지 마우스를 화면에서 임의로 움직입니다. 
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/puttygen-generate.jpg)
-
-4. [Save private key] 버튼을 누릅니다. 이 파일은 확장자가 주어져 있지 않습니다.
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/puttygen-saveprivatekey.jpg)
 
 
-5. 텍스트 필드에 표시된 Public key를 복사하고 수동으로 새 텍스트 파일에 저장하고 파일 이름을 id_rsa.pub로 지정하십시오.
 
-6. 백업을 위해서 노트패드와 같은 텍스트 에디터로 붙여 넣고 별도로 보관합니다.
+
+
 
 7. OCI 콘솔로 전환하십시오. OCI 서비스 메뉴에서, **Compute** 아래에 **Instances** 를 클릭합니다.
 
