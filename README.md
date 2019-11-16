@@ -197,7 +197,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 	
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance2.PNG" alt="image-alt-text">
 
-**Configure Networking**
+3. **Configure Networking**
 
 	**참고**: 기본 설정된 정보가 맞는지 확인 후 Public IP할당 옵션만 수정하십시오.
 - **Virtual cloud network compartment**: VCN Compartment(MCD)
@@ -210,10 +210,11 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 - 
 - 
 - 
-- - **Boot Volume:** 기본 옵션을 유지
-- **Add SSH Keys:** 위에서 생성한 Public key를 선택하거나 혹은 직접 붙여넣기를 합니다.
-
-9. **Create**버튼을 눌러서 인스턴스를 생성합니다.
+4. **Boot Volume:** 기본 옵션을 유지
+5. **Add SSH Keys:** 위에서 생성한 Public key를 선택하거나 혹은 직접 붙여넣기를 합니다.
+	**Create**버튼을 눌러서 인스턴스를 생성합니다.
+	
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance4.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
