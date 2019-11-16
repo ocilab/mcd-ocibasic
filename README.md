@@ -301,24 +301,8 @@ lsblk
 
 </details>
 
-
-
-
-- **STEP 6**:  블록 볼륨을 인스턴스에 연결
-- **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
-- **APPENDIX**
-
-
-
-
-
-
-
-
-
-
-
-## Install httpd on compute instance and install an app on Block Volume
+<details>
+<summary><b>인스턴스에 httpd 설치 후 블록 볼륨에서 컨텐츠 서비스 </b></summary>
 
 1. 인스턴스에 httpd 서버를 설치하기 위해 ssh 세션으로 이동하여 아래와 같이 명령을 수행합니다:
 ```
@@ -328,7 +312,7 @@ sudo yum -y install httpd
 ```
 sudo firewall-cmd --permanent --add-port=80/tcp 
 ```
-      (방화벽을 다시로드하여 규칙을 활성화하십시오.) 
+      (방화벽을 다시 로드하여 규칙을 활성화하십시오.) 
 
 ```
 sudo firewall-cmd --reload 
@@ -389,6 +373,26 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_008.PNG" alt="image-alt-text">
 
 **이상으로 우리는 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음으로 부가 선택 항목으로써 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
+
+</details>
+
+
+- **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+- **APPENDIX**
+
+
+
+
+
+
+
+
+
+
+
+## Install httpd on compute instance and install an app on Block Volume
+
+
 
 ## 옵션: 블록 볼륨을 분리하고 부트 볼륨을 사용하여 두 번째 컴퓨팅 인스턴스를 시작하고 기존의 블록 볼륨을 연결하기
 
