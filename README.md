@@ -229,49 +229,49 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 1. OCI 서비스 메뉴에서 블록 스토리지 아래의 **Block Volumes**을 클릭 하십시오.
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance7.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block1.PNG" alt="image-alt-text">
 
-**Create Block Volume**을 클릭하고 나타나는 대화상자를 아래와 같이 채웁니다.(Compartment MCD 확인)
+2. **Create Block Volume**을 클릭하고 나타나는 대화상자를 아래와 같이 채웁니다.(Compartment MCD 확인)
 
 - **Create in Compartment:** 올바른 Compartment가 선택되어 있는지 확인 합니다.
 - **Name:** 생성 할 블록볼륨의 이름을 지정하십시오(예 "block_vm)
 - **Availability Domain:** 사용가능한 첫번째 도메인을 선택하십시오 (멀티 AD의 경우에는 연결 할 Compute인스턴스와 동일한 AD에 속하도록 합니다).
 - **SIZE:** 50 (GB 단위의 입력값이며 이 경우 50GB가 설정 됩니다)
 - **BACKUP POLICY:** 별도로 지정하지 않습니다 (만약 이 필드에서 ‘Error Retrieving Value’ 표기되면 그대로 두고 진행합니다)
+- **Create Block Volume**을 클릭하고 볼륨상태가 Provisioning에서 available이 될 때까지 기다립니다.
 
-17. **Create Block Volume**을 클릭하고 볼륨상태가 Provisioning에서 available이 될 때까지 기다립니다.
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block2.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text">
+3. 블록 볼륨을 Compute 인스턴스에 연결하기 위해서 OCI 서비스 메뉴의 **[Compute] --> [Instance]-->액션 아이콘의 [Attach Block Volume]**을 클릭하십시오.
 
-18.  블록 볼륨을 Compute 인스턴스에 연결하십시오. OCI 서비스 메뉴의 Compute에서 Instance를 클릭하십시오. 
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block3.PNG" alt="image-alt-text">
 
-19.  위에서 생성한 compute 인스턴스의 오른쪽 메뉴에서  **Attach Block Volume**을 클릭합니다.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text">
-
-20. 대화상자를 채우십시오:
+4. 대화상자를 채운다음 Attach 버튼을 클릭 하십시오.
 
 - 블록 볼륨을 연결할 방법을 선택: Paravirtualized
 
-**NOTE:**  ISCSI 모드를 사용할 수도 있습니다. 자세한 내용은 다음을 참조하십시오;  ;
+  ​	**NOTE:**  ISCSI 모드를 사용할 수도 있습니다.  본 실습에서는 편의상 Paravirtualized를 사용합니다.
 
-**https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm#attachtype** OR refer Appendix section at the end of the lab.
-
-
-- BLOCK VOLUME COMPARTMENT: 적절한 Compartment가 미리 설정되어 있습니다.
-- Block Volume: 위에서 생성한 블록 볼륨을 선택합니다.
-- Device Path: Choose a device path. **만약 Multi device의 경우 경로가 혼동될 수 있으니 경로를 기록 해 두십시오**
 - Access: Choose READ/WRITE
 
-21. **Attach**버튼을 클릭하십시오.
+- BLOCK VOLUME COMPARTMENT: 적절한 Compartment가 미리 설정되어 있습니다.
 
-22. **Close**버튼을 클릭하십시오.
+- Block Volume: 위에서 생성한 **블록 볼륨을 선택**합니다.
 
-**이제 블록 볼륨이 생성되어 Compute 인스턴스에 연결 되었습니다.**
+- Device Path: Choose a device path. **/dev/oracleoci/oraclevdb 선택**
 
-23. Compute 인스턴스의 리소스중 **Attached Block Volumes**에 블록 볼륨이 연결되어 있는지 확인 하십시오.
+- *Attach**버튼을 클릭하십시오.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_005.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block4.PNG" alt="image-alt-text">
+
+
+
+5. **이제 블록 볼륨이 생성되어 Compute 인스턴스에 연결 되었습니다.**
+   Compute 인스턴스의 리소스중 **Attached Block Volumes**에 블록 볼륨이 연결되어 있는지 확인 하십시오.
+
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block5.PNG" alt="image-alt-text">
+
+
 
 
 - **STEP 6**:  블록 볼륨을 인스턴스에 연결
