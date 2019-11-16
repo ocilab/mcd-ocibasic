@@ -201,7 +201,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 - **Subnet:** VCN생성시 함께 생성된 기본 Subnet을 선택하십시오 
 - **Use network security groups to control traffic** : 기본옵션(Un-checked)을 그대로 두십시오 
 - **Assign a public IP address**: 옵션을 선택합니다.
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance2.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance3.PNG" alt="image-alt-text">
 - 
 - 
 - 
