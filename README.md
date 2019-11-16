@@ -415,7 +415,7 @@ sudo umount /dev/sdb
 
 8. **이하의 입력 과정은 인스턴스 생성 과정과 동일하며 Shape 변경, SSH Key 변경 등 그 밖의 파라미터 수정 가능 합니다.
  
- <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol4.PNG" alt="image-alt-text">
+ <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol5.PNG" alt="image-alt-text">
  
 9. **Create Instance** 버튼을 눌러서 인스턴스를 생성 하십시오.
 
