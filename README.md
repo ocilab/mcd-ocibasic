@@ -147,7 +147,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 3. [Session] 탭에서 IP를 입력하고, 다음 접속 시 별도 설정 없이 접속하기 위해서 세션을  저장한 후 **Open**버튼을 눌러서 접속을 하십시오.
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty4.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty4.png" alt="image-alt-text">
 
 4. 마지막으로 확인 버튼을 "예" 누르면 접속이 완료 됩니다.
 
