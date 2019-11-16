@@ -179,7 +179,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 </details>
 
 <details>
-<summary><b>인스턴스를 생성</b>하고 간단한 <b>애플리케니션</b>을 설치</summary>
+<summary><b>인스턴스 생성하기</b></summary>
 
 1. OCI 서비스 메뉴에서, **Compute** 아래에 **Instances** 를 클릭합니다.
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance1.PNG" alt="image-alt-text">
@@ -222,310 +222,16 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 8. **Public IP**를 이용하여 Putty로 로그인 합니다.
 
-
 </details>
 
-- **STEP 5**:  인스턴스를 생성하고 간단한 애플리케니션을 설치
-- **STEP 6**:  블록 볼륨을 인스턴스에 연결
-- **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
-- **APPENDIX**
+<details>
+<summary><b>블록 볼륨 만들기</b></summary>
 
+1. OCI 서비스 메뉴에서 블록 스토리지 아래의 **Block Volumes**을 클릭 하십시오.
 
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance7.PNG" alt="image-alt-text">
 
-
-
-
-
-
-
-
-
-```
- cd /C/Users/PhotonUser/.ssh
-```
-11. **ls** 명령으로 id_rsa 파일이 존재하는지 확인 하고,
-
-12. 인스턴스의 Public IP를 대상으로 아래와 같이 ssh 접속을 합니다. (Oracle Linux의 기본  user명은 opc 입니다)
-```
-ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
-```
-
-**HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
-
-13. 보안 메시지가 표시되면 'yes'를 입력 하십시오.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
-
-14. 정상 접속이 되고 프롬프트에 opc@<인스턴스-이름> 이 표기되는지 확인 합니다.
-15. 인스턴스에 OCI CLI를 설치하려면 다음 명령을 입력하십시오.
-
-
-    # bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
-
-**NOTE:** 이하의 OCI CLI 설치에 필요한 설정 Dialog는 모두 기본값을 사용 하도록 하십시오.
-
-1. 설치 위치를 묻는 프롬프트가 뜨면  기본 입력값을 사용합니다 (엔터)
-
-2. oci 실행 파일의 위치를 묻는 프롬프트가 뜨면 기본값을 사용합니다(엔터)
-
-3. 스크립트의 위치를 묻는 프롬프트가 뜨면 기본값을 사용합니다.(엔터)
-
-4. 추가 옵션 CLI 패키지를 묻는 프롬프트가 뜨면 기본값을 사용 사용합니다.(엔터)
-
-5. $PATH 업데이트 및 Shell에 Tab 자동완성을 활성화가기 위해 Profile을 수정할지 묻는 프롬프트가 뜨면(Y 엔터)
-
-6. 마지막으로 rc file을 업데이트 할 경로를 묻는 프롬프트가 뜨면 기본값을 사용합니다(엔터)
-
-7. 설치가 정상적으로 끝났으면 oci 명령이 동작하는 지 아래와 같이 버젼 확인을 해 봅니다.
-
-   `# oci -v`
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/100_CLI_001.png)
-
-   
-
-8. 다음으로 아래 명령을 통해서 OCI CLI의 설정을 합니다.:
-
-   `# oci setup config`
-
-9. 설정파일이 위치할 디렉토리명을 입력하라는 프롬프트가 뜨면 기본값(엔터)사용 하십시오. 이어서 OCID를 입력하라는 메시지가 표시됩니다.
-
-
-12. OCI 콘솔창으로 전환하고 화면 오른쪽 상단의 user 아이콘을 클릭한 다음 **User Settings**을 클릭하십시오.
-    User Information에서 OCID 복사를 클릭하십시오.
-
-![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/user-settings-01.png)
-![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/user-settings-02.png)
-
-13. SSH 터미널에서 **"Enter a user OCID:**란에 붙여넣기 합니다. 이어서 **Enter a tenancy OCID:** 입력란이 표기됩니다. 
-
-14. OCI 콘솔창으로 돌아가서 , User 아이콘을 클릭한 다음 Tenancy이름을 클릭합니다. User OCID를 복사한 것과 마찬가지로 Tenancy의 OCID를 복사 하십시오.
-
-![](/img/user-settings-03.png)
-![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/tenancy-ocid.png)
-
-16. Switch to the SSH terminal window and paste the tenancy OCID using mouse/touch pad and press Enter. You will be prompted to Enter your region.
-
-17. Type your region and press Enter. Enter Y for ‘New
-    RSA key pair’. Press Enter and accept default options for directories. Press Enter when prompted for passphrase (i.e leave it empty)
-
-18. In the SSH terminal session for second compute, Enter command:
-
-     ```
-     # cd /home/opc/.oci
-     # ls
-     ```
-
-Verify the API key files and OCI CLI config files exist.
-
-19. Enter command
-
-    `# cat config`
-
-and ensure fingerprint exists. Leave the git-bash session open as we will verify the
-finger print in config file aginst OCI, once we upload api
-keys next.
-
-## Practice 3: Upload API keys and verify functionality
-
-1. In the SSH terminal window enter command:
-
-   `# cat /home/opc/.oci/oci_api_key_public.pem`
-
-highlight the output, right click mouse/touchpad and click copy
-
-2. Switch to OCI Console window, Click user icon (Top Right of OCI Console Window) and click User Settings. In User settings click **API Keys** and **Add Public Key**.
-
-3. Paste the content of oci_api_key_public.pem copied earlier and click **Add**.
-
-4. A new finger print will be generated. Switch to the SSH terminal session and type:
-
-   `# cat /home/opc/.oci/config`
-
-Compare the finger print in the output of config file to the one in OCI console window and make sure they match
-
-**NOTE:** If multiple finger prints exist in OCI console window then identify your finger print by looking at the time stamp.
-
-***We will now test the functionality of the CLI***
-
-5. In the SSH terminal session, type the following command:
-
-   `# oci iam availability-domain list`
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/100_CLI_002.PNG)
-
-    This will list all availability domains in the current region. Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``. You will use this in a future step.
-
-6. Return to the OCI Console and navigate to **Identity** -> **Compartments**.  Retrieve the OCID of the assigned compartment.
-
-7. Enter the following command to list VCN's:
-
-   `# oci network vcn list --compartment-id <your compartment id>`
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/100_CLI_003.png)
-
-**NOTE:** It should return the details of the VCN you created at the start of this lab. If you encounter an error message, please contact the instructor.
-
-**TIP:** You can create an environment variable for your compartment ID to avoid having to paste it each time.
-
-`# export cid=<your compartment ocid>`
-
-`# oci network vcn list --compartment-id $cid`
-
-
-## Practice 4: Create another VCN with one public subnet
-
-1. Create a new virtual cloud network with a unique CIDR block. You will need the OCID of your compartment.
-
-   `# oci network vcn create --cidr-block 192.168.0.0/16 -c <your compartment OCID> --display-name CLI-Demo-VCN --dns-label clidemovcn`
-
-   Record the ``id:`` of the resource after it is created.  You will need it in the upcoming steps.
-
-2. Create a new security list
-
-   `# oci network security-list create --display-name PubSub1 --vcn-id <your VCN OCID> -c $cid --egress-security-rules  '[{"destination": "0.0.0.0/0", "destination-type": "CIDR_BLOCK", "protocol": "all", "isStateless": false}]' --ingress-security-rules '[{"source": "0.0.0.0/0", "source-type": "CIDR_BLOCK", "protocol": 6, "isStateless": false, "tcp-options": {"destination-port-range": {"max": 80, "min": 80}}}]'`
-
-   Make a note of the resource ``id:`` for use in the next step.
-
-3. Create a public subnet.
-
-   `# oci network subnet create --cidr-block 192.168.10.0/24 -c <your compartment OCID> --vcn-id <your VCN OCID> --security-list-ids '["<security list OCID from previous step>"]'`
-
-   Record the ``id:`` of the resources after it is created.  You will need it in an upcoming step.
-
-   **Note:** You have the option to specify up to 5 security lists and a custom route table.  In this case, we are only assigning one security list and allowing the system to automatically associate the default route table.
-
-4. Create an Internet Gateway.  You will need the OCID of your VCN and Compartment.
-
-   `# oci network internet-gateway create -c <your compartment OCID> --is-enabled true --vcn-id <your VCN OCID> --display-name DemoIGW`
-
-   Make a note of the ``id:`` for this resource after it has been created.
-
-5. Next, we will update the default route table with a route to the internet gateway.  First, you will need to locate the OCID of the default route table.
-
-   `# oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>`
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/100_CLI_004.png)
-
-   Record the ``id:`` of the `Default Route Table`
-
-6. Update the route table with a route to the internet gateway.
-
-   `# oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'`
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/100_CLI_005.png)
-
-   **Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules. The prompt shown in the screenshot above illustrates this point.
-
-
-## Practice 5: Use QUERY to find Oracle Linux Image ID, then launch a compute instance
-
-1. Use the CLI ``query`` command to retrieve the OCID for the latest Oracle Linux image.  Make a note of the image ID for future use.
-
-   `# oci compute image list --compartment-id <your compartment OCID> --query 'data[?contains("display-name",`Oracle-Linux-7.6-20`)]|[0:1].["display-name",id]'`
-
-   You may find more information on the Query command here: https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/cliusing.htm#ManagingCLIInputandOutput
-
-2. Launch a compute instance with the following command.  We previously created a regional subnet because our command did not include a specific availability domain. For compute instances, we must specify an availability domain and subnet.
-
-   You will need the following pieces of information:
-
-   - Availability domain name
-   - Subnet OCID
-   - Valid compute shape (i.e. VM.Standard.E2.1)
-   - Your public SSH key
-
-
-    `# oci compute instance launch --availability-domain <your AD name> --display-name demo-instance --image-id <ID from previous step> --subnet-id <subnet OCID> --shape VM.Standard.E2.1 --assign-public-ip true --metadata '{"ssh_authorized_keys": "<your public ssh key here>"}'`
-    
-    Capture the ``id:`` of the compute instance launch output.
-
-3. Check the status of the instances
-
-   `# oci compute instance get --instance-id <the instance OCID> --query 'data."lifecycle-state"'`
-
-4. Rerun the command every 30-60 seconds until the lifecycle-state is ``RUNNING``
-
-***This completes the exercise for basic usage of the OCI CLI.***
-
-## Bonus Exercise: Use the CLI to create the rest of the VCN resources
-
-This section is optional and does not contain detailed instructions.  Instead, there are a series of objectives that you will complete on your own. Use the OCI CLI reference documentation for guidance.
-https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html
-
-1. Locate the public IP address of the instance using the CLI
-
-   `# oci compute instance list-vnics --instance-id <instance OCID> | grep "ip.:"`
-   ...ok, that is the last hint!
-
-2. Attempt to connect via SSH.  Does it work? (hint: it should time out)
-
-3. Use the CLI to create an ingress rule for SSH traffic in your custom security list.  Don't forget the ``oci network security-list update`` command requires you to pass all current and new rules.  If you just pass one rule, it will overwrite the existing rules.
-
-4. Connect via SSH now. Is it working?
-
-5. Create and attach a 50GB block volume to your instance.
-
-6. Terminate / destroy all of the resources you created in this lab.  Hint: the order in which you delete the resources is very important.
-
-***Congratulations! You have successfully completed Getting Started with OCI CLI lab.***
-
-## Appendix A: Create an SSH key pair
-
-**For Mac OS**
-
-1. Terminal Window 
-2. 프롬프트에서 ``ssh-keygen`` 을 입력
-3. 기본 값으로 *enter*를 입력
-4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오. 
-5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
-
-**For Windows: GitBash 또는 Windows Subsystem for Linux (WSL)**
-
-1. 선호하는 Terminal 도구를 사용하며 이하 과정은 Mac OS & Linux 환경에서와 동일 합니다.
-
-2. 프롬프트에서 ``ssh-keygen`` 을 입력
-
-3. 기본 값으로 *enter*를 입력
-
-4. 이번 실습에서는 SSH Key에 대한 비밀번호를 별도로 지정하지 마십시오.
-
-5. ``cat ~/.ssh/id_rsa.pub`` 를 입력하여 Public key를 조회하고 나중에 사용할 수 있도록 따로 보관하십시오
-
-   <img src="C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
-
-   
-
-**For Windows: PuttyGen 사용하기**
-
-1. PuttyGen 열기
-
-2. [Generate] 버튼 클릭
-
-3. 진행률 표시 줄이 100 %에 도달 할 때까지 마우스를 화면에서 임의로 움직입니다. 
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/puttygen-generate.jpg)
-
-4. [Save private key] 버튼을 누릅니다. 이 파일은 확장자가 주어져 있지 않습니다.
-
-   ![](C:/Users/jinjang/Documents/GitHub/mcd-ocibasic/img/puttygen-saveprivatekey.jpg)
-
-
-5. 텍스트 필드에 표시된 Public key를 복사하고 수동으로 새 텍스트 파일에 저장하고 파일 이름을 id_rsa.pub로 지정하십시오.
-
-
-
-
-
-
-
-
-
-
-
-14. OCI 서비스 메뉴에서 블록 스토리지 아래의 **Block Volumes**을 클릭 한 다음 **Create Block Volume**을 클릭하십시오.
-15. 나타나는 대화상자를 아래와 같이 채웁니다.: 
-
+**Create Block Volume**을 클릭하고 나타나는 대화상자를 아래와 같이 채웁니다.(Compartment MCD 확인)
 
 - **Create in Compartment:** 올바른 Compartment가 선택되어 있는지 확인 합니다.
 - **Name:** 생성 할 블록볼륨의 이름을 지정하십시오(예 "block_vm)
@@ -539,7 +245,7 @@ https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html
 
 18.  블록 볼륨을 Compute 인스턴스에 연결하십시오. OCI 서비스 메뉴의 Compute에서 Instance를 클릭하십시오. 
 
-19. 위에서 생성한 compute 인스턴스의 오른쪽 메뉴에서  **Attach Block Volume**을 클릭합니다.
+19.  위에서 생성한 compute 인스턴스의 오른쪽 메뉴에서  **Attach Block Volume**을 클릭합니다.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text">
 
@@ -566,6 +272,21 @@ https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html
 23. Compute 인스턴스의 리소스중 **Attached Block Volumes**에 블록 볼륨이 연결되어 있는지 확인 하십시오.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_005.PNG" alt="image-alt-text">
+
+
+- **STEP 6**:  블록 볼륨을 인스턴스에 연결
+- **STEP 7**:  인스턴스의 부트 볼륨을 이용하여 새로운 인스턴스로 복원 하기
+- **APPENDIX**
+
+
+
+
+
+
+
+
+
+
 
 ## Install httpd on compute instance and install an app on Block Volume
 
