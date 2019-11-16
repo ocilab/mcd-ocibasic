@@ -187,14 +187,18 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 2. **Create Instance**버튼을 누르고. 아래와 같이 대화상자의 내용을 채웁니다:
 
-	2-1. **Name your instance**: <인스턴스 이름을 입력> 
-	2-2. **Choose an operating system or image source**: OS 이미지 목록에서 선호하는 이미지를 선택하십시오.(기본 Oracle Linux 7.7 선택 권장)
+	2-1. **Name your instance**: <인스턴스 이름을 입력>
+	
+	2-2. **Choose an operating system or image source**: OS 이미지 목록에서 선호하는 이미지를 선택하십시오.(기본 Oracle Linux 7.7 선택 권장
+	
 	2-3. **Hide Shape, Network, Storage Options**: 를 클릭하여 숨은 옵션을 펼쳐 주십시오.
+	
 	**참고**: 실습환경의 기본 선택 사항이 설정되어 있습니다.
+	
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance2.PNG" alt="image-alt-text">
 
 **Configure Networking**
-	**참고: 기본 설정된 정보가 맞는지 확인 후 Public IP할당 옵션만 수정하십시오.
+	**참고**: 기본 설정된 정보가 맞는지 확인 후 Public IP할당 옵션만 수정하십시오.
 - **Virtual cloud network compartment**: VCN Compartment를 선택 하십시오.
 - **Virtual cloud network**: 앞에서 생성한 VCN을 선택하십시오.
 - **Subnet Compartment:** Subnet Compartment를 선택하십시오.
