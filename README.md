@@ -225,7 +225,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 </details>
 
 <details>
-<summary><b>블록 볼륨 만들기</b></summary>
+<summary><b>블록 볼륨을 생성하고 인스턴스에 연결</b></summary>
 
 1. OCI 서비스 메뉴에서 블록 스토리지 아래의 **Block Volumes**을 클릭 하십시오.
 
@@ -271,6 +271,49 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block5.PNG" alt="image-alt-text">
 
+</details>
+
+<details>
+<summary><b>블록 볼륨 마운트</b></summary>
+
+
+4. lsblk 명령을 입력하여 블록 볼륨 스토리지가 초기화 되었는지 확인하십시오. 첫번째로 Attach된 스토리지는 sdb로 표기됩니다. 
+
+<img src="img/OCI_Quick_Start001-1.PNG" alt="image-alt-text">
+
+
+
+5. 블록 볼륨을 포멧하기 위해서 아래 명령을 실행하십시오
+```            
+sudo fdisk /dev/sdb -l 
+```
+6. 블록 볼륨에 파일시스템을 생성 하도록 아래와 같이 명령합니다.: 
+```
+sudo mkfs.ext4 -L datapartition /dev/sdb 
+```
+
+**NOTE:** 실습에서는 파티션을 구성하지 않고 전체 디스크를 사용합니다. Proceed anyway? y 를 입력하십시오
+
+
+
+7. 디스크의 마운트 포인트를 생성 하십시오:
+```
+sudo mkdir -p /mnt/www/html            
+```
+
+8. 생성된 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
+```
+sudo mount /dev/sdb /mnt/www/html
+```
+
+9. lsblk명령어로  /dev/sdb 볼륨이 /mnt/www/html 디렉토리에 마운트 되었는지 확인하십시오. 
+```
+lsblk 
+```
+<img src="/img/Customer_Lab_006-1.PNG" alt="image-alt-text">
+
+</details>
+
 
 
 
@@ -310,40 +353,6 @@ sudo firewall-cmd --reload
 sudo systemctl start httpd 
 ```
 
-4. lsblk 명령을 입력하여 블록 볼륨 스토리지가 초기화 되었는지 확인하십시오. 첫번째로 Attach된 스토리지는 sdb로 표기됩니다. 
-
-<img src="img/OCI_Quick_Start001-1.PNG" alt="image-alt-text">
-
-
-
-5. 블록 볼륨을 포멧하기 위해서 아래 명령을 실행하십시오
-```            
-sudo fdisk /dev/sdb -l 
-```
-6. 블록 볼륨에 파일시스템을 생성 하도록 아래와 같이 명령합니다.: 
-```
-sudo mkfs.ext4 -L datapartition /dev/sdb 
-```
-
-**NOTE:** 실습에서는 파티션을 구성하지 않고 전체 디스크를 사용합니다. Proceed anyway? y 를 입력하십시오
-
-
-
-7. 디스크의 마운트 포인트를 생성 하십시오:
-```
-sudo mkdir -p /mnt/www/html            
-```
-
-8. 생성된 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
-```
-sudo mount /dev/sdb /mnt/www/html
-```
-
-9. lsblk명령어로  /dev/sdb 볼륨이 /mnt/www/html 디렉토리에 마운트 되었는지 확인하십시오. 
-```
-lsblk 
-```
-<img src="/img/Customer_Lab_006-1.PNG" alt="image-alt-text">
 
 10. 다음으로 아래 위치에서 App을 다운로드 할 것입니다.
 ```
