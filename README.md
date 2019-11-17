@@ -33,6 +33,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 ## 실습 단계
+
 <details>
 <summary><b>시작에 앞서</b>:  Oracle Free Tier 계정 생성 절차 보기</summary>
 지난 9월에 열렸던 Oracle Open World 2019에서 발표되었던 Oracle Free Tier는 기존의 한달동안 300달러 상당의 무료 계정에서 확대하여 기간 제약없이 사용 할 수 있는 Always Free Tier를 확대하여 제공하기로 하였습니다. 
@@ -74,7 +75,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 ><img src="img/always_free13.png" width="80%">
 ></details>
 
-
+#### 1 단계
 
 <details>
 <summary> OCI 콘솔에 <b>로그인</b></summary>
@@ -86,6 +87,8 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 <summary> 사용자, 그룹 및 Compartment 설명</summary>
 설명 장표 추가 예정
 ></details>
+
+#### 2 단계
 
 <details>
 <summary><b> VCN 생성</b>하기</summary>
@@ -158,7 +161,6 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <details>
 <summary><b>SSH Key</b>  다운로드 및 Client(Putty) 설정</summary>
-
 [SSH Key 다운로드](https://objectstorage.ap-seoul-1.oraclecloud.com/n/apackrsct01/b/bucket-20190614-1639/o/sshkeys.zip)
 
 putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다. 
@@ -190,6 +192,8 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty7.PNG" alt="image-alt-text">
 
 </details>
+
+#### 3 단계
 
 <details>
 <summary><b>인스턴스 생성하기</b></summary>
@@ -390,6 +394,8 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 **이상으로 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음 실습은 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
 
 </details>
+
+#### 4 단계
 
 <details>
 <summary><b>부트 볼륨을 이용하여 새로운 인스턴스로 복원 </b></summary>
