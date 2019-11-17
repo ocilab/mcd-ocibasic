@@ -18,7 +18,9 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 * OCI (Oracle Cloud Infrastructure) 계정
 * SSH Terminal (windows Putty, macOS Terminal 등)
 
+## 실습 시나리오
 
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/scenario.PNG" alt="image-alt-text">
 
 ## 실습 단계
 <details>
@@ -280,7 +282,7 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 1. lsblk 명령을 입력하여 블록 볼륨 스토리지가 초기화 되었는지 확인하십시오. 첫번째로 Attach된 스토리지는 sdb로 표기됩니다. 
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/OCI_Quick_Start001-1.PNG" alt="image-alt-text">
-   
+
 2. 블록 볼륨에 파일시스템을 생성 하도록 아래와 같이 명령합니다.: 
 ```
 sudo mkfs.ext4 -L datapartition /dev/sdb 
@@ -414,12 +416,13 @@ sudo umount /dev/sdb
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol4.PNG" alt="image-alt-text">
 
 8. **이하의 입력 과정은 인스턴스 생성 과정과 동일하며 Shape 변경, SSH Key 변경 등 그 밖의 파라미터 수정 가능 합니다.
- 
+
  <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol5.PNG" alt="image-alt-text">
- 
+
 9. **Create Instance** 버튼을 눌러서 인스턴스를 생성 하십시오.
 
    
+
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bookvol5.PNG" alt="image-alt-text">
 
 
