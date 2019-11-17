@@ -158,8 +158,8 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <details>
 <summary><b>SSH Key</b>  다운로드 및 Client(Putty) 설정</summary>
-[ssh key 다운로드 링크](), Putty 설정 화면 캡쳐 예정
-SSH Key [다운로드](https://objectstorage.ap-seoul-1.oraclecloud.com/n/apackrsct01/b/bucket-20190614-1639/o/sshkeys.zip)
+
+[SSH Key 다운로드](https://objectstorage.ap-seoul-1.oraclecloud.com/n/apackrsct01/b/bucket-20190614-1639/o/sshkeys.zip)
 
 putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다. 
 
