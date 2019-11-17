@@ -350,7 +350,7 @@ cd /home/opc
 ```
 11. wget 명령으로 아래 url 경로에 있는 App 패키지를 다운로드 하십시오:
 ```
-wget https://github.com/snafuz/oci-quickstart-lab/archive/master.zip
+wget https://github.com/ocilab/mcd-ocibasic/raw/master/archive/master.zip
 ```
 12. 받은 파일을 unzip으로 압축을 해제 하십시오: 
 ```
@@ -359,7 +359,7 @@ unzip master.zip
 
 13. 압축이 풀린 웹 컨텐츠를 Document Root가 될 마운트 포인트로 복사 하십시오:
 ```
-sudo cp -R oci-quickstart-lab-master/static/* /mnt/www/html/
+sudo cp -R static/* /mnt/www/html/
 ```
 
 14. vi로 httpd.conf 파일을 수정하십시오:
