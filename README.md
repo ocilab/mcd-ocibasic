@@ -22,6 +22,16 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/scenario.PNG" alt="image-alt-text">
 
+**1단계** 에서는 각자에게 주어진 실습 계정을 통해서 오라클 클라우드에 로그인 과정을 설명합니다.
+
+**2단계** 에서는 **VCN(Virtual Cloud Network)**을 생성 하고 서브 컴포넌트에 대한 구성 확인 및 보안 목록을 수정 합니다.
+
+**3단계** 에서는 인스턴스를 생성해서 접속을 한 후, 블록 볼륨을 추가/마운트 해서 웹 컨텐츠의 Document Root로써 웹을 실행 합니다.
+
+**4단계** 에서는 인스턴스와 부트 볼륨을 분리해 내서 이를 통해서 새로운 인스턴스로 복원하는 과정을 설명합니다.
+
+
+
 ## 실습 단계
 <details>
 <summary><b>시작에 앞서</b>:  Oracle Free Tier 계정 생성 절차 보기</summary>
