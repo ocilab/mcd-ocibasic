@@ -159,39 +159,9 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 </details>
 
-<details>
 <summary><b>SSH Key</b>  다운로드 및 Client(Putty) 설정</summary>
 [SSH Key 다운로드](https://objectstorage.ap-seoul-1.oraclecloud.com/n/apackrsct01/b/bucket-20190614-1639/o/sshkeys.zip)
 
-putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다. 
-
-1. [Connection]탭의 [Data] 항목에서 -Auto-login username에 **opc** 입력
-
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty2.PNG" alt="image-alt-text">
-
-
-
-
-
-2. [SSH]탭의 [Auth] 항목에서 [Browse]버튼을 누르고 PC의 Private key를 찾아 선택 하십시오.
-
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty3.PNG" alt="image-alt-text">
-
-
-
-
-
-3. [Session] 탭에서 IP를 입력하고, 다음 접속 시 별도 설정 없이 접속하기 위해서 세션을  저장한 후 **Open**버튼을 눌러서 접속을 하십시오.
-
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty4.png" alt="image-alt-text">
-
-
-
-4. 마지막으로 확인 버튼을 "예" 누르면 접속이 완료 됩니다.
-
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty7.PNG" alt="image-alt-text">
-
-</details>
 
 #### 3 단계
 
@@ -238,6 +208,33 @@ putty.exe를 실행하고 인스턴스의 접속 정보를 입력합니다.
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance7.PNG" alt="image-alt-text">
 
 8. **Public IP**를 이용하여 Putty로 로그인 합니다.
+
+</details>
+
+
+<details>
+<summary><b>SSH Client(Putty)에 인스턴스의 접속 정보 입력</b></summary>
+
+1. [Connection]탭의 [Data] 항목에서 -Auto-login username에 **opc** 입력
+
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty2.PNG" alt="image-alt-text">
+
+
+
+2. [SSH]탭의 [Auth] 항목에서 [Browse]버튼을 누르고 PC의 Private key를 찾아 선택 하십시오.
+
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty3.PNG" alt="image-alt-text">
+
+
+3. [Session] 탭에서 IP를 입력하고, 다음 접속 시 별도 설정 없이 접속하기 위해서 세션을  저장한 후 **Open**버튼을 눌러서 접속을 하십시오.
+
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty4.png" alt="image-alt-text">
+
+
+
+4. 마지막으로 확인 버튼을 "예" 누르면 접속이 완료 됩니다.
+
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/putty7.PNG" alt="image-alt-text">
 
 </details>
 
@@ -389,7 +386,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 20. 브라우저에 아래의 이미지가 표시되면 정상 입니다.
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_008.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/pengsu.jpg" alt="image-alt-text">
 
 **이상으로 새로 생성한 VCN에 Compute 인스턴스와 블록 볼륨을 생성 및 연결하고 여기에 웹서비스가 실행되도록 실습을 마쳤습니다. 다음 실습은 첫번째 인스턴스의 부트 볼륨을 사용하여 두번째 인스턴스를 생성하고 기존의 웹 컨텐츠가 보존되어 있는 블록볼륨을 연결 해 보겠습니다.**
 
