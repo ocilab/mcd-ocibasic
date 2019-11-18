@@ -40,6 +40,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 ><img src="img/always_free1.png" width="80%">
 
 >http://www.oracle.com 에 접속한 뒤 우측 상단의 [Oracle Cloud Free Tier]를 클릭하고 좌측 하단의[Start for free]버튼을 클릭합니다.
+>
 ><img src="img/always_free2.png" width="80%">
 
 
@@ -62,9 +63,13 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 ><img src="img/always_free8.png" width="80%">
 
 >그림과 같이 카드의 정보를 기입합니다. 카드는 인증의 용도로만 사용되고 Free Tier 사용과 관련해서 어떠한 결제도 발생하지 않습니다. 
+>
 ><img src="img/always_free9.png" width="80%">
 >
+>
+>
 >해외 승인에 이어서 같은 금액의 승인 취소 내역을 곧바로 확인 할 수 있습니다.
+>
 ><img src="img/always_free10.png" width="80%">
 
 >오라클 클라우드 사용에 대한 동의를 체크하는 것을 마지막으로 Oracle Free Tier 생성 과정은 마무리 됩니다. 마지막으로 카드 결제는 Free Tier 사용자가 업그레이드를 하지 않는 한 결제되지 않을 것임을 다시 한번 강조하고 있습니다. 
