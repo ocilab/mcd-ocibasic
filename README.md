@@ -380,7 +380,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 <details>
 <summary><b>부트 볼륨을 이용하여 새로운 인스턴스로 복원 </b></summary>
 
-## 이 과정 에서는 블록 볼륨을 분리 한 뒤 인스턴스를 중지하고 부팅 볼륨을 사용하여 두 번째 인스턴스를 시작하여 서비스를 재개 합니다.**
+## 이 과정 에서는 블록 볼륨을 분리 한 뒤 인스턴스를 중지하고 부트 볼륨을 사용하여 두 번째 인스턴스를 시작하여 서비스를 재개 합니다.**
 
 1. ssh 세션에서 연결된 블록 볼륨의 마운트를 해제 하십시오:
 ```
@@ -420,29 +420,27 @@ sudo umount /dev/sdb
 
    
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol5.PNG" alt="image-alt-text">
-
-
-
-9. 인스턴스가 Running 상태가 되면 블록 볼륨을 연결하십시오 . 두번째 인스턴스에서 **Attach Block Volume**을 클릭하십시오.(모든 옵션은 위에 생성한 설정과 동일)
+10. 인스턴스가 Running 상태가 되면 블록 볼륨을 연결하십시오 . 두번째 인스턴스에서 **Attach Block Volume**을 클릭하십시오.(모든 옵션은 위에 생성한 설정과 동일)
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block3.PNG" alt="image-alt-text">
 
-10. 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
+11. 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
+
 ```
 sudo mount /dev/sdb /mnt/www/html
 ```
 
-11. /mnt/www/html 디렉토리로 이동해서 웹 서비스를 재시작 하십시오.
+12. /mnt/www/html 디렉토리로 이동해서 웹 서비스를 재시작 하십시오.
+
 ```
 cd /mnt/www/html 
 sudo python -m SimpleHTTPServer 80
 ```
 
-12. 웹 브라우저에서 두번째 인스턴스의 갱신 된 Public IP 주소로 접속을 하십시오,
-**http://<COMPUTE_INSTANCE_PUBLIC_IP>**
+13. 웹 브라우저에서 두번째 인스턴스의 갱신 된 Public IP 주소로 접속을 하십시오,
+    **http://<COMPUTE_INSTANCE_PUBLIC_IP>**
 
-13. 브라우저에서 펭수를 다시 만났다면 성공적으로 실습을 마치셨습니다. 
+14. 브라우저에서 펭수를 다시 만났다면 성공적으로 실습을 마치셨습니다. 
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/pengsu.jpg" alt="image-alt-text">
 
