@@ -83,10 +83,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/oci_console_login.gif" alt="image-alt-text">
 ></details>
 
-<details>
-<summary> 사용자, 그룹 및 Compartment 설명</summary>
-설명 장표 추가 예정
-></details>
+
 
 #### 2 단계
 
