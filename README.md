@@ -26,7 +26,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 **2단계** 에서는 VCN(Virtual Cloud Network)을 생성하고 서브 컴포넌트에 대한 구성 확인 및 보안 목록을 수정 합니다.
 
-**3단계** 에서는 인스턴스를 생성해서 접속을 한 후, 블록 볼륨을 추가/마운트 해서 웹 컨텐츠의 Document Root로써 웹을 실행 합니다.
+**3단계** 에서는 인스턴스를 생성해서 SSH로 접속을 한 후, 블록 볼륨을 추가/마운트 해서 웹 컨텐츠의 Document Root로써 웹을 실행 합니다.
 
 **4단계** 에서는 인스턴스와 부트 볼륨을 분리해 내서 이를 통해서 새로운 인스턴스로 복원하는 과정을 설명합니다.
 
@@ -112,7 +112,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 **1. Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
 
-​		**Create in Compartment:** MCD 이름이 정상적으로 지정되어 있는지 확인 하십시오.
+**Create in Compartment:** MCD 이름이 정상적으로 지정되어 있는지 확인 하십시오.
 
 **2. Create Virtual Cloud Network Plus Related Resources:** 옵션을 선택 합니다.
 
@@ -156,11 +156,8 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 </details>
 
-<summary><b>SSH Key</b>  다운로드 및 Client(Putty) 설정</summary>
-[SSH Key 다운로드](https://objectstorage.ap-seoul-1.oraclecloud.com/n/apackrsct01/b/bucket-20190614-1639/o/sshkeys.zip)
 
-
-#### 3 단계
+#### [SSH Key 다운로드](  https://objectstorage.ap-seoul-1.oraclecloud.com/n/apackrsct01/b/bucket-20190614-1639/o/sshkeys.zip)
 
 <details>
 <summary><b>인스턴스 생성하기</b></summary>
