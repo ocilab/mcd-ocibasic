@@ -441,7 +441,7 @@ sudo python -m SimpleHTTPServer 80
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/pengsu.jpg" alt="image-alt-text">
 
-**** 부트 볼륨을 이용해서 손쉽게 새로운 인스턴스를 생성 했고, 생성하는 동안에 구성 옵션은 얼마든지 수정 할 수 있습니다. 기존의 볼륨을 연결하여 컨텐츠를 이용할 수 있고 부트 볼륨이 가진 원래의 설정을 모두 보존 되었음을 확인하였습니다..****
+** 부트 볼륨을 이용해서 손쉽게 새로운 인스턴스를 생성 했고, 생성하는 동안에 구성 옵션은 얼마든지 수정 할 수 있습니다. 기존의 볼륨을 연결하여 컨텐츠를 이용할 수 있고 부트 볼륨이 가진 원래의 설정을 모두 보존 되었음을 확인하였습니다.**
 
 </details>
 
