@@ -312,68 +312,50 @@ lsblk
 </details>
 
 <details>
-<summary><b>인스턴스에 httpd 설치 후 블록 볼륨에서 컨텐츠 서비스 </b></summary>
+<summary><b>블록 볼륨의 컨텐츠로 웹 서비스 시작하기 </b></summary>
 
-1. 인스턴스에 httpd 서버를 설치하기 위해 ssh 세션으로 이동하여 아래와 같이 명령을 수행합니다:
-```
-sudo yum -y install httpd 
-```
-2. http 트래픽을 허용하기 위해서 방화벽 설정에서 80번 포트 오픈 설정을 하십시오.
+1. http 트래픽을 허용하기 위해서 방화벽 설정에서 80번 포트 오픈 설정을 하십시오.
 ```
 sudo firewall-cmd --permanent --add-port=80/tcp 
 ```
-방화벽을 다시 로드하여 규칙을 활성화하십시오. 
+2. 방화벽을 다시 로드하여 규칙을 활성화하십시오. 
 
 ```
 sudo firewall-cmd --reload 
 ```
 
 
-3. httpd 서비스를 시작 하십시오:
-```
-sudo systemctl start httpd 
-```
-
-
-10. 다음으로 아래 위치에서 App을 다운로드 할 것입니다.
+3. 다음으로 아래 위치에서 App을 다운로드 할 것입니다.
 ```
 cd /home/opc
 ```
-11. wget 명령으로 아래 url 경로에 있는 App 패키지를 다운로드 하십시오:
+
+4. wget 명령으로 아래 url 경로에 있는 App 패키지를 다운로드 하십시오:
 ```
 wget https://github.com/ocilab/mcd-ocibasic/raw/master/archive/master.zip
+
 ```
-12. 받은 파일을 unzip으로 압축을 해제 하십시오: 
+5. 받은 파일을 unzip으로 압축을 해제 하십시오: 
 ```
 unzip master.zip
 ```
 
-13. 압축이 풀린 웹 컨텐츠를 Document Root가 될 마운트 포인트로 복사 하십시오:
+6. 압축이 풀린 웹 컨텐츠를 Document Root가 될 마운트 포인트로 복사 하십시오:
 ```
 sudo cp -R static/* /mnt/www/html/
 ```
 
-14. vi로 httpd.conf 파일을 수정하십시오:
+7. 아래의 디렉토리로 이동 하십시오. 
 ```
-sudo vi /etc/httpd/conf/httpd.conf 
-```
-15.  문자열 /var/www을 검색하여 /mnt/www/html로 바꾸십시오.  총 3 군데의 수정지점이 있습니다. 
-
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_007.PNG" alt="image-alt-text">
-
-16. 파일을 저장하고 빠져 나갑니다. (Esc :wq!)
-
-17. chcon 명령어로 SELinux에서 웹 컨텐츠의 보안 컨텍스트를 설정하십시오:
-```
-sudo chcon -R --type=httpd_sys_rw_content_t /mnt
+cd /mnt/www/html
 ```
 
-18. http 서비스를 재시작 하십시오:
+8. 파이썬 명령으로 간단한 웹 서버를 실행 하십시오. 
 ```
-sudo systemctl restart httpd 
+sudo python -m SimpleHTTPServer 80
 ```
 
-19. 웹 브라우저에서 각자의 인스턴스의 Public IP 주소로 접속을 하십시오:
+9. 웹  브라우저에서 각자의 인스턴스의 Public IP 주소로 접속을 하십시오:
 ```
 http://<COMPUTE_INSTANCE_PUBLIC_IP>
 ```
