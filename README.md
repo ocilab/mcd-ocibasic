@@ -24,7 +24,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 **1단계** 에서는 각자에게 주어진 실습 계정을 통해서 오라클 클라우드에 로그인 과정을 설명합니다.
 
-**2단계** 에서는 **VCN(Virtual Cloud Network)**을 생성하고 서브 컴포넌트에 대한 구성 확인 및 보안 목록을 수정 합니다.
+**2단계** 에서는 VCN(Virtual Cloud Network)을 생성하고 서브 컴포넌트에 대한 구성 확인 및 보안 목록을 수정 합니다.
 
 **3단계** 에서는 인스턴스를 생성해서 접속을 한 후, 블록 볼륨을 추가/마운트 해서 웹 컨텐츠의 Document Root로써 웹을 실행 합니다.
 
