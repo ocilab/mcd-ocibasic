@@ -381,7 +381,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 ```
 sudo umount /dev/sdb 
 ```
-2. OCI 콘솔 윈도우에서, Compute 인스턴스 이름을 클릭하고  **Attached Block Volume** 섹션의 액션 아이콘에서 **Detach**를 클릭 하십시오.(팝업 창에 OK 확인 버튼을 한번 더  누릅니다)
+2. OCI 서비스 메뉴에서  --> [Compute] --> [Instance]에서 인스턴스 이름을 클릭하고  **Attached Block Volume** 섹션의 액션 아이콘에서 **Detach**를 클릭 하십시오.(팝업 창에 OK 확인 버튼을 한번 더  누릅니다)
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol1.PNG" alt="image-alt-text">
 
@@ -415,7 +415,7 @@ sudo umount /dev/sdb
 
    
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bookvol5.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol5.PNG" alt="image-alt-text">
 
 
 
