@@ -421,24 +421,27 @@ sudo umount /dev/sdb
 
 9. 인스턴스가 Running 상태가 되면 블록 볼륨을 연결하십시오 . 두번째 인스턴스에서 **Attach Block Volume**을 클릭하십시오.(모든 옵션은 위에 생성한 설정과 동일)
 
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block3.PNG" alt="image-alt-text">
+
 10. 마운트 포인트(디렉토리)에 디스크를 마운트 하십시오:
 ```
 sudo mount /dev/sdb /mnt/www/html
 ```
 
-11. httpd 서비스를 재시작 하십시오.
+11. /mnt/www/html 디렉토리로 이동해서 웹 서비스를 재시작 하십시오.
 ```
-sudo systemctl restart httpd
+cd /mnt/www/html 
+sudo python -m SimpleHTTPServer 80
 ```
 
 12. 웹 브라우저에서 두번째 인스턴스의 갱신 된 Public IP 주소로 접속을 하십시오,
 **http://<COMPUTE_INSTANCE_PUBLIC_IP>**
 
-13. 아래의 그림과 같이 웹 화면이 브라우징 되면 성공적으로 실습이 완료 된 것입니다. (입력창에 별도의 입력은 필요하지 않습니다)
+13. 브라우저에서 펭수를 다시 만났다면 성공적으로 실습을 마치셨습니다. 
 
-<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/img/Customer_Lab_015.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/pengsu.jpg" alt="image-alt-text">
 
-**** 이제 다른 인스턴스의 부팅 볼륨을 사용하여 컴퓨팅 인스턴스를 성공적으로 시작하고 다른 인스턴스에 연결된 블록 볼륨을 다시 연결했습니다. 이 프로세스 동안 블록 볼륨은 모든 데이터를 보존했습니다. 또한 부트 볼륨을 사용하여 시작된 컴퓨팅 인스턴스에는 httpd 서버 및 방화벽 구성이 이미 존재합니다 ****
+**** 부트 볼륨을 이용해서 손쉽게 새로운 인스턴스를 생성 했고, 생성하는 동안에 구성 옵션은 얼마든지 수정 할 수 있습니다. 기존의 볼륨을 연결하여 컨텐츠를 이용할 수 있고 부트 볼륨이 가진 원래의 설정을 모두 보존 되었음을 확인하였습니다..****
 
 </details>
 
