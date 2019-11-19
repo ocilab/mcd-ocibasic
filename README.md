@@ -248,12 +248,12 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 2. **Create Block Volume**을 클릭하고 나타나는 대화상자를 아래와 같이 채웁니다.(Compartment MCD 확인)
 
-- **Create in Compartment:** 올바른 Compartment가 선택되어 있는지 확인 합니다.
-- **Name:** 생성 할 블록볼륨의 이름을 지정하십시오(예 "block_vm)
-- **Availability Domain:** 사용가능한 첫번째 도메인을 선택하십시오 (멀티 AD의 경우에는 연결 할 Compute인스턴스와 동일한 AD에 속하도록 합니다).
-- **SIZE:** 50 (GB 단위의 입력 값이며 이 경우 50GB가 설정 됩니다)
-- **BACKUP POLICY:** 별도로 지정하지 않습니다 (만약 이 필드에서 ‘Error Retrieving Value’ 표기되면 그대로 두고 진행합니다)
-- **Create Block Volume**을 클릭하고 볼륨상태가 Provisioning에서 available이 될 때까지 기다립니다.
+	- **Create in Compartment:** 올바른 Compartment가 선택되어 있는지 확인 합니다.
+	- **Name:** 생성 할 블록볼륨의 이름을 지정하십시오(예 "block_vm)
+	- **Availability Domain:** 사용가능한 첫번째 도메인을 선택하십시오 (멀티 AD의 경우에는 연결 할 Compute인스턴스와 동일한 AD에 속하도록 합니다).
+	- **SIZE:** 50 (GB 단위의 입력 값이며 이 경우 50GB가 설정 됩니다)
+	- **BACKUP POLICY:** 별도로 지정하지 않습니다 (만약 이 필드에서 ‘Error Retrieving Value’ 표기되면 그대로 두고 진행합니다)
+	- **Create Block Volume**을 클릭하고 볼륨상태가 Provisioning에서 available이 될 때까지 기다립니다.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block2.PNG" alt="image-alt-text">
 
