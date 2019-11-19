@@ -181,8 +181,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 	2-2. **Choose an operating system or image source**: OS 이미지 목록에서 선호하는 이미지를 선택하십시오.(기본 Oracle Linux 7.7 선택 권장
 	
 	2-3. **Hide Shape, Network, Storage Options**: 를 클릭하여 숨은 옵션을 펼쳐 주십시오.
-	
-	**참고**: 실습환경의 기본 선택 사항이 설정되어 있습니다.
+
 	
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/instance2.PNG" alt="image-alt-text">
@@ -258,25 +257,25 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block2.PNG" alt="image-alt-text">
 
-3. 블록 볼륨을 Compute 인스턴스에 연결하기 위해서 OCI 서비스 메뉴의 **[Compute] --> [Instance]-->액션 아이콘의 [Attach Block Volume]**을 클릭하십시오.
+3. 블록 볼륨을 Compute 인스턴스에 연결하기 위해서 OCI 서비스 메뉴의 **[Compute] --> [Instance]-->액션 아이콘의 [Attach Block Volume]을 클릭하십시오.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block3.PNG" alt="image-alt-text">
 
 4. 대화상자를 채운 다음 Attach 버튼을 클릭 하십시오.
 
-- 블록 볼륨을 연결할 방법을 선택: Paravirtualized
+	- 블록 볼륨을 연결할 방법을 선택: **Paravirtualized**
 
-  ​	**NOTE:**  ISCSI 모드를 사용할 수도 있습니다.  본 실습에서는 편의상 Paravirtualized를 사용합니다.
+	  ​	**NOTE:**  ISCSI 모드를 사용할 수도 있습니다.  본 실습에서는 편의상 Paravirtualized를 사용합니다.
 
-- Access: Choose READ/WRITE
+	- Access: Choose READ/WRITE
 
-- BLOCK VOLUME COMPARTMENT: 적절한 Compartment가 미리 설정되어 있습니다.
+	- BLOCK VOLUME COMPARTMENT: 적절한 Compartment가 미리 설정되어 있습니다.
 
-- Block Volume: 위에서 생성한 **블록 볼륨을 선택**합니다.
+	- Block Volume: 위에서 생성한 **블록 볼륨을 선택**합니다.
 
-- Device Path: Choose a device path. **/dev/oracleoci/oraclevdb 선택**
+	- Device Path: Choose a device path. **/dev/oracleoci/oraclevdb 선택**
 
-- *Attach**버튼을 클릭하십시오.
+	- **Attach**버튼을 클릭하십시오.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/block4.PNG" alt="image-alt-text">
 
