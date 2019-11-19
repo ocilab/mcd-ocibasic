@@ -37,7 +37,8 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 <details>
 <summary><b>시작에 앞서</b>:  Oracle Free Tier 계정 생성 절차 보기</summary>
 지난 9월에 열렸던 Oracle Open World 2019에서 발표되었던 Oracle Free Tier는 기존의 한달동안 300달러 상당의 무료 계정에서 확대하여 기간 제약없이 사용 할 수 있는 Always Free Tier를 확대하여 제공하기로 하였습니다. 
-><img src="img/always_free1.png" width="80%">
+<img src="img/always_free1.png" width="80%">
+
 
 >http://www.oracle.com 에 접속한 뒤 우측 상단의 [Oracle Cloud Free Tier]를 클릭하고 좌측 하단의[Start for free]버튼을 클릭합니다.
 >
@@ -84,9 +85,9 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <details>
 <summary> OCI 콘솔에 <b>로그인</b></summary>
-> https://console.ap-seoul-1.oraclecloud.com 접속 > Tenant 입력 > **Continue** 클릭 > Oracle Cloud Infrastructure 아래 사용자 이름(User Name)과 암호(Password) 입력 > **Sign In** 클릭
+> https://console.ap-seoul-1.oraclecloud.com 접속 > Tenant 입력 > Continue 클릭 > Oracle Cloud Infrastructure 아래 사용자 이름(User Name)과 암호(Password) 입력 > Sign In 클릭
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/oci_console_login.gif" alt="image-alt-text">
-></details>
+</details>
 
 
 
@@ -105,7 +106,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 
 2. 화면 왼쪽의 드롭 다운 메뉴에서 사용자에게 할당된 Compartment를 선택 하십시오.
-   **참고:* 본 실습의 환경에는 "MCD"라는 Compartment가 미리 설정되어 있습니다.
+   **#참고:** 본 실습의 환경에는 "MCD"라는 Compartment가 미리 설정되어 있습니다.
 
    
 
@@ -115,13 +116,13 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 3. 아래의 대화 상자를 채우십시오.
 
-**1. Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
+	**3-1. Name:** 쉽게 식별할 수 있는 VCN 이름을 지정합니다.
 
-**Create in Compartment:** MCD 이름이 정상적으로 지정되어 있는지 확인 하십시오.
+	**Create in Compartment:** MCD 이름이 정상적으로 지정되어 있는지 확인 하십시오.
 
-**2. Create Virtual Cloud Network Plus Related Resources:** 옵션을 선택 합니다.
+	**3-2. Create Virtual Cloud Network Plus Related Resources:** 옵션을 선택 합니다.
 
-**3. Create Virtual Cloud Network** 버튼을 클릭하여 리소스를 생성합니다.
+	**3-3. Create Virtual Cloud Network** 버튼을 클릭하여 리소스를 생성합니다.
 
 
 
@@ -137,7 +138,7 @@ Oracle Modern Cloud Day 2019의 Developer Hands-on Track
 
 <details>
 <summary><b>보안 목록</b>에 서비스 포트 허용</summary>
-1. http 80번 액세스를 제공하기 위해서 생성한 VCN내 **Security List**를 클릭 한 다음 **Default Security list for<VCN-이름>**을 클릭합니다.
+1. http 80번 액세스를 제공하기 위해서 생성한 VCN내 [Security List]를 클릭 한 다음 [Default Security list for<VCN-이름>]을 클릭합니다.
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/Customer_Lab_001.PNG" alt="image-alt-text">
 
@@ -380,7 +381,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 <details>
 <summary><b>부트 볼륨을 이용하여 새로운 인스턴스로 복원 </b></summary>
 
-## 이 과정 에서는 블록 볼륨을 분리 한 뒤 인스턴스를 중지하고 부트 볼륨을 사용하여 두 번째 인스턴스를 시작하여 서비스를 재개 합니다.**
+## 이 과정 에서는 블록 볼륨을 분리 한 뒤 인스턴스를 중지하고 부트 볼륨을 사용하여 두 번째 인스턴스를 시작하여 서비스를 재개 합니다.
 
 1. ssh 세션에서 연결된 블록 볼륨의 마운트를 해제 하십시오:
 ```
