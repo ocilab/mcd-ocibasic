@@ -412,7 +412,7 @@ sudo umount /dev/sdb
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol4.PNG" alt="image-alt-text">
 
-8. **이하의 입력 과정은 인스턴스 생성 과정과 동일하며 Shape 변경, SSH Key 변경 등 그 밖의 파라미터 수정 가능 합니다.
+8. 이하의 입력 과정은 인스턴스 생성 과정과 동일하며 Shape 변경, SSH Key 변경 등 그 밖의 파라미터 수정도 가능 합니다.
 
  <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/bootvol5.PNG" alt="image-alt-text">
 
@@ -444,7 +444,7 @@ sudo python -m SimpleHTTPServer 80
 
 <img src="https://raw.githubusercontent.com/ocilab/mcd-ocibasic/master/img/pengsu.jpg" alt="image-alt-text">
 
-** 부트 볼륨을 이용해서 손쉽게 새로운 인스턴스를 생성 했고, 생성하는 동안에 구성 옵션은 얼마든지 수정 할 수 있습니다. 기존의 볼륨을 연결하여 컨텐츠를 이용할 수 있고 부트 볼륨이 가진 원래의 설정을 모두 보존 되었음을 확인하였습니다.**
+**부트 볼륨을 이용해서 손쉽게 새로운 인스턴스를 생성 했고, 생성하는 동안에 구성 옵션은 얼마든지 수정 할 수 있습니다. 기존의 볼륨을 연결하여 컨텐츠를 이용할 수 있고 부트 볼륨이 가진 원래의 설정을 모두 보존 되었음을 확인하였습니다.**
 
 </details>
 
